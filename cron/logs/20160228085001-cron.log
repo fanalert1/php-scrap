@@ -1,0 +1,13 @@
+Job Started on 2016/02/28 19:20:01
+PHP Notice:  Undefined index: prev_type in /root/php_scrap/extract.php on line 489
+PHP Notice:  Undefined index: prev_type in /root/php_scrap/extract.php on line 489
+PHP Notice:  Undefined index: prev_type in /root/php_scrap/extract.php on line 489
+PHP Notice:  Undefined index: prev_type in /root/php_scrap/extract.php on line 489
+PHP Notice:  Undefined index: prev_type in /root/php_scrap/extract.php on line 489
+PHP Notice:  Undefined index: token in /root/php_scrap/extract.php on line 565
+PHP Notice:  Undefined index: token in /root/php_scrap/extract.php on line 565
+Job completed on 2016/02/28 19:20:07
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   137    0     0  100   137      0    112  0:00:01  0:00:01 --:--:--   112100   139  100     2  100   137      1     91  0:00:02  0:00:01  0:00:01    91
+ok

@@ -1,0 +1,7 @@
+{
+    "require": {
+        "monolog/monolog": "1.0.*",
+        "fabpot/goutte": "*",
+        "mongodb/mongodb": "^1.0.0"
+    }
+}
