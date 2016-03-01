@@ -430,7 +430,7 @@ foreach($running_movies_list as $key=>$values)
 				}
 			}else {
 				$result = $movies_collection->insertOne(
-				array("lang"=> $lang , "name" => $movie_name, "type" => $type, "id"=>$movie_id,"poster_url"=>$poster_url,"link"=>$movie_link,"actors"=>$actor,"director"=>$director,"music_director"=>$music,"genre"=>$genre,"producer"=>$producer,"release_ts"=>date("Y/m/d H:i:s",strtotime($release_ts)), "disabled"=>"false", "insert_ts" => $current_ts ));
+				array("lang"=> $lang , "name" => $movie_name, "type" => "running", "prev_type"=>"null", "id"=>$movie_id,"poster_url"=>$poster_url,"link"=>$movie_link,"actors"=>$actor,"director"=>$director,"music_director"=>$music,"genre"=>$genre,"producer"=>$producer,"release_ts"=>date("Y/m/d H:i:s",strtotime($release_ts)), "disabled"=>"false", "insert_ts" => $current_ts ));
 	
 				$events = $events_collection->insertOne(
 				array("movie_id"=>$movie_id,"movie_name"=>$movie_name,"event_id"=>getCounter("event_id",$counter_collection),"event_type" => "FR","notify"=> 'true',"insert_ts" => $current_ts ));
@@ -580,19 +580,19 @@ foreach($events as $document)
     $json = json_decode($temp , true);
     if($json["event_type"]=="RC")
     {
-      $event_type=$json["movie_name"]." movie is closed for booking";
+      $event_type=$json["movie_name"]." is closed for booking";
     }
     elseif($json["event_type"]=="FU")
     {
-      $event_type=$json["movie_name"]." has been added to Upcoming";
+      $event_type=$json["movie_name"]." added to Upcoming";
     }
     elseif($json["event_type"]=="UR")
     {
-      $event_type=$json["movie_name"]." movie booking has been opened";
+      $event_type=$json["movie_name"]." booking has been opened";
     }
     elseif($json["event_type"]=="FR")
     {
-      $event_type=$json["movie_name"]." movie booking has been opened";
+      $event_type=$json["movie_name"]." booking has been opened";
     }
 
     $data = array(

@@ -1,6 +1,6 @@
 {
     "require": {
-        "monolog/monolog": "1.0.*",
+        "monolog/monolog": "1.0.1.*",
         "fabpot/goutte": "*",
         "mongodb/mongodb": "^1.0.0"
     }
