@@ -571,6 +571,7 @@ $ch = curl_init('https://parse-androbala.c9users.io/parse/users');
     }
 
 $event_type="";
+$not_title="";
 $events = $events_collection->find(array("notify" =>"true"));
 
 foreach($events as $document)
@@ -578,26 +579,27 @@ foreach($events as $document)
 
     $temp = json_encode($document);
     $json = json_decode($temp , true);
+    $not_title = $json["movie_name"]." (Tamil)";
     if($json["event_type"]=="RC")
     {
-      $event_type=$json["movie_name"]." is closed for booking";
+      $event_type=$json["movie_name"]." booking closed on ticketnew.com";
     }
     elseif($json["event_type"]=="FU")
     {
-      $event_type=$json["movie_name"]." added to Upcoming";
+      $event_type=$json["movie_name"]." is releasing soon";
     }
     elseif($json["event_type"]=="UR")
     {
-      $event_type=$json["movie_name"]." booking has been opened";
+      $event_type=$json["movie_name"]." booking opened on ticketnew.com";
     }
     elseif($json["event_type"]=="FR")
     {
-      $event_type=$json["movie_name"]." booking has been opened";
+      $event_type=$json["movie_name"]." booking opened on ticketnew.com";
     }
 
     $data = array(
       "tokens" => $device_tokens,
-      "notification" => ["alert"=>$event_type,"android"=>["notId"=>$json["event_id"],"payload"=>["image"=>"icon"]]]
+      "notification" => ["alert"=>$event_type,"android"=>["title" => $not_title,"notId"=>$json["event_id"],"payload"=>["image"=>"icon"]]]
         );
     $data_string = json_encode($data);
     $ch = curl_init('https://push.ionic.io/api/v1/push');

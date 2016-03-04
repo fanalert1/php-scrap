@@ -1,0 +1,16 @@
+git add *
+git status
+git commit -m "text"
+git push -u origin master
+username 
+password
+
+git rm --cached *.log // to remove older files
+
+git reset HEAD * // to reset already added contents
+
+cat .gitignore
+
+root@ubuntu-512mb-sgp1-01:~/php_scrap# cat .gitignore
+/cron/logs/*
+/vendor/*
