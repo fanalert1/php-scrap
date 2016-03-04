@@ -599,7 +599,7 @@ foreach($events as $document)
 
     $data = array(
       "tokens" => $device_tokens,
-      "notification" => ["alert"=>$event_type,"android"=>["title" => $not_title,"notId"=>$json["event_id"],"payload"=>["image"=>"icon"]]]
+      "notification" => ["alert"=>$event_type,"android"=>["title" => $not_title,"notId"=>$json["event_id"],"payload"=>["image"=>"icon","title" => $not_title,"message" => $event_type]]]
         );
     $data_string = json_encode($data);
     $ch = curl_init('https://push.ionic.io/api/v1/push');
