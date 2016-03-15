@@ -11,11 +11,11 @@ echo "Job Started on ".$current_ts."\n";
 require_once(__DIR__ . '/vendor/autoload.php');//Autoload required API's
 
 //DB connection
-$client = new MongoDB\Client;
-$movies_collection = (new MongoDB\Client)->firedb->movies;
-$events_collection = (new MongoDB\Client)->firedb->events;
-$tokens_collection = (new MongoDB\Client)->firedb->device_tokens;
-$counter_collection = (new MongoDB\Client)->firedb->counter;
+$client = new MongoDB\Client("mongodb://128.199.141.102:27017");
+$movies_collection = $client->firedb->movies;
+$events_collection = $client->firedb->events;
+$tokens_collection = $client->firedb->device_tokens;
+$counter_collection = $client->firedb->counter;
 
 $client = new Client();
 $crawler = $client->request('GET', 'http://www.ticketnew.com/Movie-Ticket-Online-booking/C/Chennai');
