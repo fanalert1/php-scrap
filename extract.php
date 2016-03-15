@@ -547,7 +547,9 @@ foreach($token as $document)
   $device_tokens[$i]=$json["token_id"];
   $i +=1;
 }*/
-$ch = curl_init('https://parse-androbala.c9users.io/parse/users');
+//$ch = curl_init('https://parse-androbala.c9users.io/parse/users');
+$ch = curl_init('http://128.199.141.102:8080/parse/users');
+
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
@@ -579,10 +581,13 @@ foreach($events as $document)
 
     $temp = json_encode($document);
     $json = json_decode($temp , true);
+    
     $not_title = $json["movie_name"]." (Tamil)";
+    $movie_id = $json["movie_id"];
+    $movie_name = $json["movie_name"];
     if($json["event_type"]=="RC")
     {
-      $event_type=$json["movie_name"]." booking closed on ticketnew.com";
+      $event_type="Booking closed on ticketnew.com";
     }
     elseif($json["event_type"]=="FU")
     {
@@ -590,16 +595,16 @@ foreach($events as $document)
     }
     elseif($json["event_type"]=="UR")
     {
-      $event_type=$json["movie_name"]." booking opened on ticketnew.com";
+      $event_type="Booking opened on ticketnew.com";
     }
     elseif($json["event_type"]=="FR")
     {
-      $event_type=$json["movie_name"]." booking opened on ticketnew.com";
+      $event_type="Booking opened on ticketnew.com";
     }
 
     $data = array(
       "tokens" => $device_tokens,
-      "notification" => ["alert"=>$event_type,"android"=>["title" => $not_title,"notId"=>$json["event_id"],"payload"=>["image"=>"icon","title" => $not_title,"message" => $event_type]]]
+      "notification" => ["alert"=>$event_type,"android"=>["title" => $not_title,"notId"=>$json["event_id"],"payload"=>["image"=>"icon","title" => $not_title,"message" => $event_type,"movie_id" => $movie_id, "movie_name" => $movie_name]]]
         );
     $data_string = json_encode($data);
     $ch = curl_init('https://push.ionic.io/api/v1/push');
