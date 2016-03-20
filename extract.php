@@ -40,7 +40,19 @@ $crawler->filter('div[id$="overlay-tab-coming-soon"]')->each(function (Crawler $
                                     {
                                        $key="Tamil";
                                     }
+                                    else if ($item=="Tamil 3D")
+                                    {
+                                       $key="Tamil";
+                                    }
                                     else if($item=="English")
+                                    {
+                                        $key="English";
+                                    }
+                                    else if($item=="English 2D")
+                                    {
+                                        $key="English";
+                                    }
+                                     else if($item=="English 3D")
                                     {
                                         $key="English";
                                     }
@@ -52,11 +64,16 @@ $crawler->filter('div[id$="overlay-tab-coming-soon"]')->each(function (Crawler $
                                     {
                                         $key="Telugu";
                                     }else if($item=="Malayalam")
-                                        {
+                                    {
                                             $key="Malayalam";
+                                    }
+                                    else{
+                                      if(!in_array($item, $upcoming_movies_list[$key])) //fix for child div issue for eng 2d 3d section
+                                        {
+                                            $upcoming_movies_list[$key][] = $item;
                                         }
-                                        else{
-                                       $upcoming_movies_list[$key][] = $item;}
+                                        
+                                    }
                          });
                 //to get link for respective language movies
                 $node->filter('a')->each(function (Crawler $node){
@@ -188,34 +205,34 @@ foreach($upcoming_movies_list as $key=>$values)
                 unset($cast_crew);
             }
 
-            $present=isPresent($movie_name,$movies_collection);
+            $present=isPresent($movie_name,$movies_collection,$lang);
             $type="upcoming";
             if($present)
             {
-                $current_type=getDetail($movie_name,$movies_collection,"name","type");
-                $prevs_type=getDetail($movie_name,$movies_collection,"name","prev_type");
+                $current_type=getDetail($movie_name,$lang,$movies_collection,"name","type");
+                $prevs_type=getDetail($movie_name,$lang,$movies_collection,"name","prev_type");
                 if($current_type=="upcoming")
                 {
                   $result = $movies_collection->updateOne(
-                  ['name' => $movie_name],
+                  ['name' => $movie_name, 'lang' => $lang],
                   ['$set' => array("lang"=> $lang , "name" => $movie_name, "type" => $type,"release_ts"=>date("Y/m/d H:i:s",strtotime($release_ts)), "update_ts" => $current_ts)],
                   ['upsert' => false]); //might not be needed
                 }elseif ($current_type=="closed")
                 {
                   if ($prevs_type=="upcoming") {
                     $result = $movies_collection->updateOne(
-                    ['name' => $movie_name],
+                    ['name' => $movie_name, 'lang' => $lang],
                     ['$set' => array("lang"=> $lang , "name" => $movie_name, "type" => $type,"prev_type" => "closed","release_ts"=>date("Y/m/d H:i:s",strtotime($release_ts)), "update_ts" => $current_ts)],
                     ['upsert' => false]);
                   }elseif ($prevs_type=="running") {
                     $result = $movies_collection->updateOne(
-                    ['name' => $movie_name],
+                    ['name' => $movie_name, 'lang' => $lang],
                     ['$set' => array("lang"=> $lang , "name" => $movie_name, "type" => "running","prev_type" => "closed","release_ts"=>date("Y/m/d H:i:s",strtotime($release_ts)), "update_ts" => $current_ts)],
                     ['upsert' => false]);
                   }
                 }elseif ($current_type=="running") {
                   $result = $movies_collection->updateOne(
-                  ['name' => $movie_name],
+                  ['name' => $movie_name, 'lang' => $lang],
                   ['$set' => array("lang"=> $lang , "name" => $movie_name, "type" => "running","release_ts"=>date("Y/m/d H:i:s",strtotime($release_ts)), "update_ts" => $current_ts)],
                   ['upsert' => false]);
                 }
@@ -251,7 +268,19 @@ $crawler->filter('div[id$="overlay-tab-booking-open"]')->each(function (Crawler 
                                 {
                                    $key="Tamil";
                                 }
+                                else if ($item=="Tamil 3D")
+                                {
+                                   $key="Tamil";
+                                }
                                 else if($item=="English")
+                                {
+                                    $key="English";
+                                }
+                                else if($item=="English 2D")
+                                {
+                                    $key="English";
+                                }
+                                else if($item=="English 3D")
                                 {
                                     $key="English";
                                 }
@@ -268,16 +297,32 @@ $crawler->filter('div[id$="overlay-tab-booking-open"]')->each(function (Crawler 
                                     $key="Malayalam";
                                 }
                                 else{
-                                $running_movies_list[$key][] = $item;}
+                                    
+                                    if(!in_array($item, $running_movies_list[$key])) //fix for child div issue for eng 2d 3d section
+                                        {
+                                            $running_movies_list[$key][] = $item;
+                                            $node->filter('a')->each(function (Crawler $node){ //fix for link order issue - tamil and english links clubbed for tamil dubbed english movie
+                                                global $running_movies_links;
+                                                $link = $node->link();
+                                                $uri = $link->getUri();
+                                                global $key;
+                                                $running_movies_links[$key][] = $uri;
+                                            });
+                                            
+                                        }
+                                    
+                                    
+                                }
                         });
                         //to get link for respective language movies
+                        /*
                         $node->filter('a')->each(function (Crawler $node){
                         global $key;
                         global $running_movies_links;
                         $link = $node->link();
                         $uri = $link->getUri();
                         $running_movies_links[] = $uri;
-                        });
+                        });*/
             });
 });
 //Inserting running movies details into database
@@ -295,7 +340,8 @@ foreach($running_movies_list as $key=>$values)
             $active_movies[$i]=$movie_name;
             $i +=1;
             $temp_name=str_replace(" ","-",$movie_name); //temporary variable to get the link of the movie from the array
-            foreach($running_movies_links as $link)
+            $movie_link=$running_movies_links[$lang][$key];
+            /*foreach($running_movies_links as $link)
             {
                 $movie_link="";
                 if (strpos($link, $temp_name) !== false)
@@ -303,7 +349,7 @@ foreach($running_movies_list as $key=>$values)
                     $movie_link=$link;
                     break; //break if the link is assigned
                 }
-            }
+            }*/
             if(empty($movie_link))
             {
                 $movie_link="Link Not Available";
@@ -396,17 +442,17 @@ foreach($running_movies_list as $key=>$values)
                 unset($cast_crew);
 
             }
-			$present=isPresent($movie_name,$movies_collection);
+			$present=isPresent($movie_name,$movies_collection,$lang); //adding lang param. fix for english movies releasing in tamil dubbed lang
             if($present)
             {
-				$current_type=getDetail($movie_name,$movies_collection,"name","type");
-                $prevs_type=getDetail($movie_name,$movies_collection,"name","prev_type");
+				$current_type=getDetail($movie_name,$lang,$movies_collection,"name","type");
+                $prevs_type=getDetail($movie_name,$lang,$movies_collection,"name","prev_type");
 				//$upcoming=isUpcoming($movie_name,$movies_collection);
 				$type="running";
 				if($current_type=="upcoming")
 				{
 					$result = $movies_collection->updateOne(
-					['name' => $movie_name],
+					['name' => $movie_name, 'lang' => $lang],
 					['$set' => array("lang"=> $lang , "name" => $movie_name, "type" => $type, "prev_type" => "upcoming","booking_open_ts"=>$current_ts, "notify" => "true", "update_ts" => $current_ts )],
 					['upsert' => false]
 					);
@@ -417,14 +463,14 @@ foreach($running_movies_list as $key=>$values)
 				elseif($current_type=="running")
 				{
 					$result = $movies_collection->updateOne(
-						['name' => $value],
+						['name' => $value, 'lang' => $lang],
 						['$set' => array("lang"=> $lang , "name" => $value, "type" => $type, "update_ts" => $current_ts )],
 						['upsert' => false]);
 				}
 				elseif($current_type=="closed")
 				{
 					$result = $movies_collection->updateOne(
-						['name' => $value],
+						['name' => $value, 'lang' => $lang],
 						['$set' => array("lang"=> $lang , "name" => $value, "type" => $type,"prev_type" => "closed", "update_ts" => $current_ts )],
 						['upsert' => false]);
 				}
@@ -468,9 +514,9 @@ function isRunning($value,$collection)
      }
 }
 
-function isPresent($value,$collection)
+function isPresent($value,$collection,$lang)
 {
-     $count = $collection->count(["name"=>$value]);
+     $count = $collection->count(["name"=>$value,"lang"=>$lang]);
      if($count>0)
      {
          return true;
@@ -481,9 +527,9 @@ function isPresent($value,$collection)
      }
 }
 
-function getDetail($value,$collection,$inField,$outField)
+function getDetail($value,$lang,$collection,$inField,$outField)
 {
-    $count = $collection->findOne([$inField=>$value]);
+    $count = $collection->findOne([$inField=>$value,"lang"=>$lang]);
     $temp = json_encode($count);
     $json = json_decode($temp , true);
     return $json[$outField];
