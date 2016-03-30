@@ -6,5 +6,6 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Monolog' => array($vendorDir . '/monolog/monolog/src'),
+    'Bing' => array($vendorDir . '/scragg0x/bing-api-php/src'),
+    '' => array($vendorDir . '/imdbphp/imdbphp/src'),
 );

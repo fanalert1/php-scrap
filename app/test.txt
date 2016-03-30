@@ -1,0 +1,38 @@
+Array
+(
+    [24] => Array
+        (
+            [poster] => //upload.wikimedia.org/wikipedia/en/thumb/6/6b/Ride_Along_2_poster.jpg/220px-Ride_Along_2_poster.jpg
+            [director] => Tim Story
+            [producer] => Array
+                (
+                    [0] => Will Packer
+                    [1] => Ice Cube
+                    [2] => Larry Brezner
+                )
+
+            [writer] => Array
+                (
+                    [0] => Phil Hay
+                    [1] => Matt Manfredi
+                    [2] => Larry Brezner
+                )
+
+            [cast] => Array
+                (
+                    [0] => Kevin Hart
+                    [1] => Ken Jeong
+                    [2] => Benjamin Bratt
+                    [3] => Olivia Munn
+                    [4] => Bruce McGill
+                    [5] => Tika Sumpter
+                )
+
+            [music] => Christopher Lennertz
+            [release] => January 6, 2016 (2016-01-06) (Miami premiere)
+January 15, 2016 (2016-01-15) (United States)
+            [lang] => English
+            [synopsis] => Ride Along 2 is a 2016 American action comedy film directed by Tim Story and written by Phil Hay and Matt Manfredi. It is the sequel to the 2014 film Ride Along. The film stars Ice Cube, Kevin Hart, Ken Jeong, Benjamin Bratt, Olivia Munn, Bruce McGill and Tika Sumpter. Universal Pictures released the film on January 15, 2016. The film received negative reviews from critics, but has grossed over $121 million.[3][2]
+        )
+
+)

@@ -1,165 +1,5 @@
 [
     {
-        "name": "mongodb/mongodb",
-        "version": "1.0.0",
-        "version_normalized": "1.0.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/mongodb/mongo-php-library.git",
-            "reference": "851a560864281cbf91fe182aefed85bfc3395031"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/mongodb/mongo-php-library/zipball/851a560864281cbf91fe182aefed85bfc3395031",
-            "reference": "851a560864281cbf91fe182aefed85bfc3395031",
-            "shasum": ""
-        },
-        "require": {
-            "ext-mongodb": "^1.1.0",
-            "php": ">=5.4"
-        },
-        "time": "2016-01-21 19:43:25",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.0.x-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "MongoDB\\": "src/"
-            },
-            "files": [
-                "src/functions.php"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "Apache-2.0"
-        ],
-        "authors": [
-            {
-                "name": "Jeremy Mikola",
-                "email": "jmikola@gmail.com"
-            },
-            {
-                "name": "Hannes Magnusson",
-                "email": "bjori@mongodb.com"
-            },
-            {
-                "name": "Derick Rethans",
-                "email": "github@derickrethans.nl"
-            }
-        ],
-        "description": "MongoDB driver library",
-        "homepage": "https://jira.mongodb.org/browse/PHPLIB",
-        "keywords": [
-            "database",
-            "driver",
-            "mongodb",
-            "persistence"
-        ]
-    },
-    {
-        "name": "monolog/monolog",
-        "version": "1.0.2",
-        "version_normalized": "1.0.2.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/Seldaek/monolog.git",
-            "reference": "b704c49a3051536f67f2d39f13568f74615b9922"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/Seldaek/monolog/zipball/b704c49a3051536f67f2d39f13568f74615b9922",
-            "reference": "b704c49a3051536f67f2d39f13568f74615b9922",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.0"
-        },
-        "time": "2011-10-24 09:39:02",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-0": {
-                "Monolog": "src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Jordi Boggiano",
-                "email": "j.boggiano@seld.be",
-                "homepage": "http://seld.be",
-                "role": "Developer"
-            }
-        ],
-        "description": "Logging for PHP 5.3",
-        "homepage": "http://github.com/Seldaek/monolog",
-        "keywords": [
-            "log",
-            "logging"
-        ]
-    },
-    {
-        "name": "guzzlehttp/promises",
-        "version": "1.0.3",
-        "version_normalized": "1.0.3.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/guzzle/promises.git",
-            "reference": "b1e1c0d55f8083c71eda2c28c12a228d708294ea"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/guzzle/promises/zipball/b1e1c0d55f8083c71eda2c28c12a228d708294ea",
-            "reference": "b1e1c0d55f8083c71eda2c28c12a228d708294ea",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.5.0"
-        },
-        "require-dev": {
-            "phpunit/phpunit": "~4.0"
-        },
-        "time": "2015-10-15 22:28:00",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "1.0-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "GuzzleHttp\\Promise\\": "src/"
-            },
-            "files": [
-                "src/functions_include.php"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Michael Dowling",
-                "email": "mtdowling@gmail.com",
-                "homepage": "https://github.com/mtdowling"
-            }
-        ],
-        "description": "Guzzle promises library",
-        "keywords": [
-            "promise"
-        ]
-    },
-    {
         "name": "psr/http-message",
         "version": "1.0",
         "version_normalized": "1.0.0.0",
@@ -271,18 +111,224 @@
         ]
     },
     {
-        "name": "guzzlehttp/guzzle",
-        "version": "6.1.1",
-        "version_normalized": "6.1.1.0",
+        "name": "fabpot/goutte",
+        "version": "v3.1.2",
+        "version_normalized": "3.1.2.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/guzzle/guzzle.git",
-            "reference": "c6851d6e48f63b69357cbfa55bca116448140e0c"
+            "url": "https://github.com/FriendsOfPHP/Goutte.git",
+            "reference": "3cbc6ed222422a28400e470050f14928a153207e"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/guzzle/guzzle/zipball/c6851d6e48f63b69357cbfa55bca116448140e0c",
-            "reference": "c6851d6e48f63b69357cbfa55bca116448140e0c",
+            "url": "https://api.github.com/repos/FriendsOfPHP/Goutte/zipball/3cbc6ed222422a28400e470050f14928a153207e",
+            "reference": "3cbc6ed222422a28400e470050f14928a153207e",
+            "shasum": ""
+        },
+        "require": {
+            "guzzlehttp/guzzle": "^6.0",
+            "php": ">=5.5.0",
+            "symfony/browser-kit": "~2.1|~3.0",
+            "symfony/css-selector": "~2.1|~3.0",
+            "symfony/dom-crawler": "~2.1|~3.0"
+        },
+        "time": "2015-11-05 12:58:44",
+        "type": "application",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "3.1-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Goutte\\": "Goutte"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            }
+        ],
+        "description": "A simple PHP Web Scraper",
+        "homepage": "https://github.com/FriendsOfPHP/Goutte",
+        "keywords": [
+            "scraper"
+        ]
+    },
+    {
+        "name": "monolog/monolog",
+        "version": "1.0.1",
+        "version_normalized": "1.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Seldaek/monolog.git",
+            "reference": "303b8a83c87d5c6d749926cf02620465a5dcd0f2"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Seldaek/monolog/zipball/303b8a83c87d5c6d749926cf02620465a5dcd0f2",
+            "reference": "303b8a83c87d5c6d749926cf02620465a5dcd0f2",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "time": "2011-08-25 20:42:58",
+        "type": "library",
+        "installation-source": "dist",
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Jordi Boggiano",
+                "email": "j.boggiano@seld.be",
+                "homepage": "http://seld.be",
+                "role": "Developer"
+            }
+        ],
+        "description": "Logging for PHP 5.3",
+        "homepage": "http://github.com/Seldaek/monolog",
+        "keywords": [
+            "log",
+            "logging"
+        ]
+    },
+    {
+        "name": "mongodb/mongodb",
+        "version": "1.0.1",
+        "version_normalized": "1.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/mongodb/mongo-php-library.git",
+            "reference": "6093d68c06bebcc5361b9e49178725efd9182ed4"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/mongodb/mongo-php-library/zipball/6093d68c06bebcc5361b9e49178725efd9182ed4",
+            "reference": "6093d68c06bebcc5361b9e49178725efd9182ed4",
+            "shasum": ""
+        },
+        "require": {
+            "ext-mongodb": "^1.1.0",
+            "php": ">=5.4"
+        },
+        "time": "2016-03-04 20:27:01",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0.x-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "MongoDB\\": "src/"
+            },
+            "files": [
+                "src/functions.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "Apache-2.0"
+        ],
+        "authors": [
+            {
+                "name": "Jeremy Mikola",
+                "email": "jmikola@gmail.com"
+            },
+            {
+                "name": "Hannes Magnusson",
+                "email": "bjori@mongodb.com"
+            },
+            {
+                "name": "Derick Rethans",
+                "email": "github@derickrethans.nl"
+            }
+        ],
+        "description": "MongoDB driver library",
+        "homepage": "https://jira.mongodb.org/browse/PHPLIB",
+        "keywords": [
+            "database",
+            "driver",
+            "mongodb",
+            "persistence"
+        ]
+    },
+    {
+        "name": "guzzlehttp/promises",
+        "version": "1.1.0",
+        "version_normalized": "1.1.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/guzzle/promises.git",
+            "reference": "bb9024c526b22f3fe6ae55a561fd70653d470aa8"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/guzzle/promises/zipball/bb9024c526b22f3fe6ae55a561fd70653d470aa8",
+            "reference": "bb9024c526b22f3fe6ae55a561fd70653d470aa8",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.5.0"
+        },
+        "require-dev": {
+            "phpunit/phpunit": "~4.0"
+        },
+        "time": "2016-03-08 01:15:46",
+        "type": "library",
+        "extra": {
+            "branch-alias": {
+                "dev-master": "1.0-dev"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "GuzzleHttp\\Promise\\": "src/"
+            },
+            "files": [
+                "src/functions_include.php"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Michael Dowling",
+                "email": "mtdowling@gmail.com",
+                "homepage": "https://github.com/mtdowling"
+            }
+        ],
+        "description": "Guzzle promises library",
+        "keywords": [
+            "promise"
+        ]
+    },
+    {
+        "name": "guzzlehttp/guzzle",
+        "version": "6.2.0",
+        "version_normalized": "6.2.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/guzzle/guzzle.git",
+            "reference": "d094e337976dff9d8e2424e8485872194e768662"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/guzzle/guzzle/zipball/d094e337976dff9d8e2424e8485872194e768662",
+            "reference": "d094e337976dff9d8e2424e8485872194e768662",
             "shasum": ""
         },
         "require": {
@@ -295,11 +341,11 @@
             "phpunit/phpunit": "~4.0",
             "psr/log": "~1.0"
         },
-        "time": "2015-11-23 00:47:50",
+        "time": "2016-03-21 20:02:09",
         "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "6.1-dev"
+                "dev-master": "6.2-dev"
             }
         },
         "installation-source": "dist",
@@ -336,8 +382,8 @@
     },
     {
         "name": "symfony/polyfill-mbstring",
-        "version": "v1.1.0",
-        "version_normalized": "1.1.0.0",
+        "version": "v1.1.1",
+        "version_normalized": "1.1.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/polyfill-mbstring.git",
@@ -397,17 +443,17 @@
     },
     {
         "name": "symfony/dom-crawler",
-        "version": "v3.0.2",
-        "version_normalized": "3.0.2.0",
+        "version": "v3.0.3",
+        "version_normalized": "3.0.3.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/dom-crawler.git",
-            "reference": "b693a9650aa004576b593ff2e91ae749dc90123d"
+            "reference": "981c8edb4538f88ba976ed44bdcaa683fce3d6c6"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/b693a9650aa004576b593ff2e91ae749dc90123d",
-            "reference": "b693a9650aa004576b593ff2e91ae749dc90123d",
+            "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/981c8edb4538f88ba976ed44bdcaa683fce3d6c6",
+            "reference": "981c8edb4538f88ba976ed44bdcaa683fce3d6c6",
             "shasum": ""
         },
         "require": {
@@ -420,7 +466,7 @@
         "suggest": {
             "symfony/css-selector": ""
         },
-        "time": "2016-01-25 09:56:57",
+        "time": "2016-02-28 16:24:34",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -454,64 +500,9 @@
         "homepage": "https://symfony.com"
     },
     {
-        "name": "symfony/css-selector",
-        "version": "v3.0.2",
-        "version_normalized": "3.0.2.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/symfony/css-selector.git",
-            "reference": "6605602690578496091ac20ec7a5cbd160d4dff4"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/symfony/css-selector/zipball/6605602690578496091ac20ec7a5cbd160d4dff4",
-            "reference": "6605602690578496091ac20ec7a5cbd160d4dff4",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.5.9"
-        },
-        "time": "2016-01-27 05:14:46",
-        "type": "library",
-        "extra": {
-            "branch-alias": {
-                "dev-master": "3.0-dev"
-            }
-        },
-        "installation-source": "dist",
-        "autoload": {
-            "psr-4": {
-                "Symfony\\Component\\CssSelector\\": ""
-            },
-            "exclude-from-classmap": [
-                "/Tests/"
-            ]
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Jean-François Simon",
-                "email": "jeanfrancois.simon@sensiolabs.com"
-            },
-            {
-                "name": "Fabien Potencier",
-                "email": "fabien@symfony.com"
-            },
-            {
-                "name": "Symfony Community",
-                "homepage": "https://symfony.com/contributors"
-            }
-        ],
-        "description": "Symfony CssSelector Component",
-        "homepage": "https://symfony.com"
-    },
-    {
         "name": "symfony/browser-kit",
-        "version": "v3.0.2",
-        "version_normalized": "3.0.2.0",
+        "version": "v3.0.3",
+        "version_normalized": "3.0.3.0",
         "source": {
             "type": "git",
             "url": "https://github.com/symfony/browser-kit.git",
@@ -568,38 +559,120 @@
         "homepage": "https://symfony.com"
     },
     {
-        "name": "fabpot/goutte",
-        "version": "v3.1.2",
-        "version_normalized": "3.1.2.0",
+        "name": "symfony/css-selector",
+        "version": "v3.0.3",
+        "version_normalized": "3.0.3.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/FriendsOfPHP/Goutte.git",
-            "reference": "3cbc6ed222422a28400e470050f14928a153207e"
+            "url": "https://github.com/symfony/css-selector.git",
+            "reference": "6605602690578496091ac20ec7a5cbd160d4dff4"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/FriendsOfPHP/Goutte/zipball/3cbc6ed222422a28400e470050f14928a153207e",
-            "reference": "3cbc6ed222422a28400e470050f14928a153207e",
+            "url": "https://api.github.com/repos/symfony/css-selector/zipball/6605602690578496091ac20ec7a5cbd160d4dff4",
+            "reference": "6605602690578496091ac20ec7a5cbd160d4dff4",
             "shasum": ""
         },
         "require": {
-            "guzzlehttp/guzzle": "^6.0",
-            "php": ">=5.5.0",
-            "symfony/browser-kit": "~2.1|~3.0",
-            "symfony/css-selector": "~2.1|~3.0",
-            "symfony/dom-crawler": "~2.1|~3.0"
+            "php": ">=5.5.9"
         },
-        "time": "2015-11-05 12:58:44",
-        "type": "application",
+        "time": "2016-01-27 05:14:46",
+        "type": "library",
         "extra": {
             "branch-alias": {
-                "dev-master": "3.1-dev"
+                "dev-master": "3.0-dev"
             }
         },
         "installation-source": "dist",
         "autoload": {
             "psr-4": {
-                "Goutte\\": "Goutte"
+                "Symfony\\Component\\CssSelector\\": ""
+            },
+            "exclude-from-classmap": [
+                "/Tests/"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Jean-François Simon",
+                "email": "jeanfrancois.simon@sensiolabs.com"
+            },
+            {
+                "name": "Fabien Potencier",
+                "email": "fabien@symfony.com"
+            },
+            {
+                "name": "Symfony Community",
+                "homepage": "https://symfony.com/contributors"
+            }
+        ],
+        "description": "Symfony CssSelector Component",
+        "homepage": "https://symfony.com"
+    },
+    {
+        "name": "imdbphp/imdbphp",
+        "version": "v3.2.0",
+        "version_normalized": "3.2.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/tboothman/imdbphp.git",
+            "reference": "0fce2407442273ce3ac1b0b78791e820da9765b4"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/tboothman/imdbphp/zipball/0fce2407442273ce3ac1b0b78791e820da9765b4",
+            "reference": "0fce2407442273ce3ac1b0b78791e820da9765b4",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">5.3"
+        },
+        "require-dev": {
+            "mockery/mockery": "~0.9",
+            "phpunit/phpunit": "~3.7"
+        },
+        "time": "2016-02-01 20:17:53",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-0": {
+                "": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-2.0"
+        ],
+        "description": "Library for retrieving film and tv information from IMDb"
+    },
+    {
+        "name": "scragg0x/bing-api-php",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/scragg0x/bing-api-php.git",
+            "reference": "c53e779cf8c1e83139d60ccb6339354a069edd43"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/scragg0x/bing-api-php/zipball/c53e779cf8c1e83139d60ccb6339354a069edd43",
+            "reference": "c53e779cf8c1e83139d60ccb6339354a069edd43",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.2"
+        },
+        "time": "2015-11-10 16:21:48",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "Bing": "src/"
             }
         },
         "notification-url": "https://packagist.org/downloads/",
@@ -608,14 +681,15 @@
         ],
         "authors": [
             {
-                "name": "Fabien Potencier",
-                "email": "fabien@symfony.com"
+                "name": "Matthew Scragg",
+                "email": "scragg@gmail.com",
+                "homepage": "http://fleckz.com"
             }
         ],
-        "description": "A simple PHP Web Scraper",
-        "homepage": "https://github.com/FriendsOfPHP/Goutte",
+        "description": "Bing API wrapper in php",
+        "homepage": "https://github.com/scragg0x/bing-api-php",
         "keywords": [
-            "scraper"
+            "bing"
         ]
     }
 ]

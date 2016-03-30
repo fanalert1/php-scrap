@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5a23f2576698607b780fbbcbfd55064f",
-    "content-hash": "d2e5993a4c514374f88a8d7ec7845fb4",
+    "hash": "9ed83e114af94c35dacf295d05beadef",
+    "content-hash": "08b15f3f24e40a4835208e725f78862b",
     "packages": [
         {
             "name": "fabpot/goutte",
@@ -58,16 +58,16 @@
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "6.1.1",
+            "version": "6.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "c6851d6e48f63b69357cbfa55bca116448140e0c"
+                "reference": "d094e337976dff9d8e2424e8485872194e768662"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/c6851d6e48f63b69357cbfa55bca116448140e0c",
-                "reference": "c6851d6e48f63b69357cbfa55bca116448140e0c",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/d094e337976dff9d8e2424e8485872194e768662",
+                "reference": "d094e337976dff9d8e2424e8485872194e768662",
                 "shasum": ""
             },
             "require": {
@@ -83,7 +83,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "6.1-dev"
+                    "dev-master": "6.2-dev"
                 }
             },
             "autoload": {
@@ -116,20 +116,20 @@
                 "rest",
                 "web service"
             ],
-            "time": "2015-11-23 00:47:50"
+            "time": "2016-03-21 20:02:09"
         },
         {
             "name": "guzzlehttp/promises",
-            "version": "1.0.3",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/promises.git",
-                "reference": "b1e1c0d55f8083c71eda2c28c12a228d708294ea"
+                "reference": "bb9024c526b22f3fe6ae55a561fd70653d470aa8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/b1e1c0d55f8083c71eda2c28c12a228d708294ea",
-                "reference": "b1e1c0d55f8083c71eda2c28c12a228d708294ea",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/bb9024c526b22f3fe6ae55a561fd70653d470aa8",
+                "reference": "bb9024c526b22f3fe6ae55a561fd70653d470aa8",
                 "shasum": ""
             },
             "require": {
@@ -167,7 +167,7 @@
             "keywords": [
                 "promise"
             ],
-            "time": "2015-10-15 22:28:00"
+            "time": "2016-03-08 01:15:46"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -228,17 +228,51 @@
             "time": "2016-02-18 21:54:00"
         },
         {
-            "name": "mongodb/mongodb",
-            "version": "1.0.0",
+            "name": "imdbphp/imdbphp",
+            "version": "v3.2.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mongodb/mongo-php-library.git",
-                "reference": "851a560864281cbf91fe182aefed85bfc3395031"
+                "url": "https://github.com/tboothman/imdbphp.git",
+                "reference": "0fce2407442273ce3ac1b0b78791e820da9765b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mongodb/mongo-php-library/zipball/851a560864281cbf91fe182aefed85bfc3395031",
-                "reference": "851a560864281cbf91fe182aefed85bfc3395031",
+                "url": "https://api.github.com/repos/tboothman/imdbphp/zipball/0fce2407442273ce3ac1b0b78791e820da9765b4",
+                "reference": "0fce2407442273ce3ac1b0b78791e820da9765b4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">5.3"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9",
+                "phpunit/phpunit": "~3.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "description": "Library for retrieving film and tv information from IMDb",
+            "time": "2016-02-01 20:17:53"
+        },
+        {
+            "name": "mongodb/mongodb",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mongodb/mongo-php-library.git",
+                "reference": "6093d68c06bebcc5361b9e49178725efd9182ed4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mongodb/mongo-php-library/zipball/6093d68c06bebcc5361b9e49178725efd9182ed4",
+                "reference": "6093d68c06bebcc5361b9e49178725efd9182ed4",
                 "shasum": ""
             },
             "require": {
@@ -285,31 +319,26 @@
                 "mongodb",
                 "persistence"
             ],
-            "time": "2016-01-21 19:43:25"
+            "time": "2016-03-04 20:27:01"
         },
         {
             "name": "monolog/monolog",
-            "version": "1.0.2",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "b704c49a3051536f67f2d39f13568f74615b9922"
+                "reference": "303b8a83c87d5c6d749926cf02620465a5dcd0f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/b704c49a3051536f67f2d39f13568f74615b9922",
-                "reference": "b704c49a3051536f67f2d39f13568f74615b9922",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/303b8a83c87d5c6d749926cf02620465a5dcd0f2",
+                "reference": "303b8a83c87d5c6d749926cf02620465a5dcd0f2",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0"
             },
             "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Monolog": "src/"
-                }
-            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
@@ -328,7 +357,7 @@
                 "log",
                 "logging"
             ],
-            "time": "2011-10-24 09:39:02"
+            "time": "2011-08-25 20:42:58"
         },
         {
             "name": "psr/http-message",
@@ -380,8 +409,49 @@
             "time": "2015-05-04 20:22:00"
         },
         {
+            "name": "scragg0x/bing-api-php",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/scragg0x/bing-api-php.git",
+                "reference": "c53e779cf8c1e83139d60ccb6339354a069edd43"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/scragg0x/bing-api-php/zipball/c53e779cf8c1e83139d60ccb6339354a069edd43",
+                "reference": "c53e779cf8c1e83139d60ccb6339354a069edd43",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Bing": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Matthew Scragg",
+                    "email": "scragg@gmail.com",
+                    "homepage": "http://fleckz.com"
+                }
+            ],
+            "description": "Bing API wrapper in php",
+            "homepage": "https://github.com/scragg0x/bing-api-php",
+            "keywords": [
+                "bing"
+            ],
+            "time": "2015-11-10 16:21:48"
+        },
+        {
             "name": "symfony/browser-kit",
-            "version": "v3.0.2",
+            "version": "v3.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/browser-kit.git",
@@ -438,7 +508,7 @@
         },
         {
             "name": "symfony/css-selector",
-            "version": "v3.0.2",
+            "version": "v3.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/css-selector.git",
@@ -491,16 +561,16 @@
         },
         {
             "name": "symfony/dom-crawler",
-            "version": "v3.0.2",
+            "version": "v3.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dom-crawler.git",
-                "reference": "b693a9650aa004576b593ff2e91ae749dc90123d"
+                "reference": "981c8edb4538f88ba976ed44bdcaa683fce3d6c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/b693a9650aa004576b593ff2e91ae749dc90123d",
-                "reference": "b693a9650aa004576b593ff2e91ae749dc90123d",
+                "url": "https://api.github.com/repos/symfony/dom-crawler/zipball/981c8edb4538f88ba976ed44bdcaa683fce3d6c6",
+                "reference": "981c8edb4538f88ba976ed44bdcaa683fce3d6c6",
                 "shasum": ""
             },
             "require": {
@@ -543,11 +613,11 @@
             ],
             "description": "Symfony DomCrawler Component",
             "homepage": "https://symfony.com",
-            "time": "2016-01-25 09:56:57"
+            "time": "2016-02-28 16:24:34"
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.1.0",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
@@ -608,7 +678,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "scragg0x/bing-api-php": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

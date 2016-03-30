@@ -95,8 +95,7 @@ class Logger
     /**
      * @return string
      */
-    public function getName()
-    {
+    public function getName() {
         return $this->name;
     }
 
