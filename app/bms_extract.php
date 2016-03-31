@@ -104,7 +104,10 @@ foreach($upcoming_movies as $movies)
 		    else {
 		        
 		        //$movie_details=get_imdb_det($movies["name"]);
-		        $movie_details=getMovieDetails($movies["name"],"");
+		       // $movie_details=getMovieDetails($movies["name"],"");
+		        $movie_details=getMovieDetails($movie_name,$movie_link,$lang,"bms");
+		        
+		        
 		        if(is_array($movie_details)&&(count($movie_details)==1))
 		        {
 		            foreach($movie_details as $details)

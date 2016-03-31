@@ -79,7 +79,13 @@ function pattern_match($search_string,$lang,$collection)
      $pattern = "^".$first.".+".$last."$"; //'^ba.+ce$'
      //echo $pattern;
      $movie = $collection->findOne(["search_string" => [ '$regex' => $pattern],"lang"=>$lang]);
+     
+     similar_text($search_string, $movie['search_string'], $p); 
+     
+     if($p>80)
+     {
      $id = $movie['_id'];
+     }
      return $id;
      //db.movies.find({"search_string":{ $regex: '^ba.+ce$'}})
 }
@@ -150,31 +156,47 @@ function getMovieDetails($movie_name,$movie_link,$lang,$callFrom)
    //reset($movie_details);
    unset($movie_details);
    $movie_details=array();
-   $wiki_url = bingSearch($movie_name,"wiki");
-   $imdb_url =  bingSearch($movie_name,"imdb");
-   $fb_url =  bingSearch($movie_name,"filmibeat");
+   $wiki_url = bingSearch($movie_name,$lang,"wiki");
+   //$imdb_url =  bingSearch($movie_name,$lang,"imdb");
+  
    //  echo $result."\n";
    if($wiki_url!="")
    {
        $movie_details[0]=wiki_scrap($movie_name,$wiki_url);
-     //  $movie_details[0]
+       
+       if(array_key_exists("director", $movie_details[0]) && is_null($movie_details[0]["director"]))
+       {
+           echo "call1";
+           $wiki_url = bingSearch($movie_name,$lang,"wiki","2016");
+           $movie_details[0]=wiki_scrap($movie_name,$wiki_url);
+       }
+       else if(!array_key_exists("director", $movie_details[0]))
+       {
+           echo "call2";
+            $wiki_url = bingSearch($movie_name,$lang,"wiki","2016");
+            $movie_details[0]=wiki_scrap($movie_name,$wiki_url);
+           
+       }
        if($callFrom=="tktnew")
        {
-       //$movie_details[0]["release"]=date("Y/m/d H:i:s",strtotime(tktnew_scrap($movie_name,$movie_link)));
-       $movie_details[0]["release"]=tktnew_scrap($movie_name,$movie_link);
+       $release_ts=date("Y/m/d H:i:s",strtotime(tktnew_scrap($movie_name,$movie_link)));
+       $movie_details[0]["release"]=$release_ts;
        }
-       //echo "\nFound in Wiki"."\n";
-      // print_r($movie_details);
+       
        return $movie_details; 
    }
-   else if($imdb_url!="")
+   
+   $imdb_url =  bingSearch($movie_name,$lang,"imdb");
+   if($imdb_url!="")
    {
        $movie_details[0]=get_imdb_det($movie_name);
        echo "\nFound in imdb"."\n";
        print_r($movie_details);
        return $movie_details;
    }
-   else if($filmibeat!="")
+   
+   $fb_url =  bingSearch($movie_name,$lang,"filmibeat");
+   if($filmibeat!="")
    {
        $movie_details[0]=filmibeat_scrap($movie_name);
        echo "\nFound in filmi"."\n";
@@ -331,15 +353,19 @@ function googleApiSearch($movie_name,$search_type)
 }
 
 
-function bingSearch($movie_name,$source)
+function bingSearch($movie_name,$lang,$source,$year="")
 {
     
     
     if($source=="wiki")
     {
-    $query=$movie_name." film wikipedia";
-    $site="https://en.wikipedia.org";
-    $no="";
+        if($year!="")
+            $query=$movie_name." ".$year." film wikipedia";
+        else
+            $query=$movie_name." film wikipedia";
+            
+        $site="https://en.wikipedia.org";
+        $no="";
     }
     else if($source=="imdb")
     {
@@ -361,6 +387,8 @@ function bingSearch($movie_name,$source)
     $res = $c->get('Web', array('Query' => $query));
     $res = json_decode($res, true);
     $url = "";
+    
+    echo $query;
     
     foreach($res["d"]["results"] as $result)
     {

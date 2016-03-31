@@ -7,32 +7,43 @@ require('global_function.php');
 //require_once('scrap_details.php');
 use Bing\Client;
      
-     $movie_name = "Ki And Ka";
+     $movie_name = "batmanandsupermandawnofjustice";
+     $movie_link = "http://www.ticketnew.com/Kali-Movie-Tickets-Online-Show-Timings/Online-Advance-Booking/13245/C/Chennai";
      $search_type = "Movie";
      
-     $lang = "Tamil";
+     $lang = "English";
      
-     
-    $movie_details=array();
-   $wiki_url = bingSearch($movie_name,"wiki");
-   $imdb_url =  bingSearch($movie_name,"imdb");
-   $fb_url =  bingSearch($movie_name,"filmibeat");
-   echo $wiki_url;
+     $movie_name2 = "batman&supermandawnofjustice";
+     similar_text($movie_name, $movie_name2, $p); 
+     echo "Percent: $p"; 
+   
+   
+   /*
+   $movie_details=array();
+   $movie_details=getMovieDetails($movie_name,$movie_link,$lang,"tktnew");
+   
+   print_r($movie_details);
+   */
+   
+   
+   
+   
+   
+ //  $wiki_url = bingSearch($movie_name,$lang,"wiki");
+ //  $imdb_url =  bingSearch($movie_name,$lang,"imdb");
+ //  $fb_url =  bingSearch($movie_name,$lang,"filmibeat");
+   // echo $wiki_url;
    //  echo $result."\n";
+   
+   /*
    if($wiki_url!="")
    {
        $movie_details[0]=wiki_scrap($movie_name,$wiki_url);
-     //  $movie_details[0]
-      // if($callFrom=="tktnew")
-      // {
-       //$movie_details[0]["release"]=date("Y/m/d H:i:s",strtotime(tktnew_scrap($movie_name,$movie_link)));
-       //$movie_details[0]["release"]=tktnew_scrap($movie_name,$movie_link);
-    //  }
-       //echo "\nFound in Wiki"."\n";
+   
       print_r($movie_details);
-      // return $movie_details; 
+   
    }
-     
+     */
      
      
      //{"responseData": null, "responseDetails": "Suspected Terms of Service Abuse. Please see http://code.google.com/apis/errors", "responseStatus": 403}
