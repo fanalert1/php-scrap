@@ -143,9 +143,22 @@ function wiki_scrap($name,$url)
                 global $field;
                 global $info;
                 global $info1;
+                $node->filter('th[class$="summary"]')->each(function ($node) {
+                                 global $field;
+                                 global $info;
+                                 $field="title";
+                                 $info=trim($node->text());
+                                // echo $info;
+                                // $cast_crew[$movie]["wiki_title"]=trim($node->text());
+                                 //$field=trim($node->text());
+                            });
+                
                 $node->filter('th')->each(function ($node) {
                                  global $field;
+                                 if($field!="title")
+                                 {
                                  $field=trim($node->text());
+                                 }
                             });
                 $node->filter('td')->each(function ($node) 
                 {
@@ -176,7 +189,10 @@ function wiki_scrap($name,$url)
                      $info=trim($node->attr('src'));
                 });
                 
-                if ($field=="Directed by") {
+                if ($field=="title") {
+                    $cast_crew[$movie]["wiki_title"]= $info;
+                }
+                elseif ($field=="Directed by") {
                     $cast_crew[$movie]["director"]= empty($info) ? $info1 : $info;
                 }elseif ($field=="Produced by") {
                     $cast_crew[$movie]["producer"]=empty($info) ? $info1 : $info;

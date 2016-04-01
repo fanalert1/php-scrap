@@ -7,23 +7,25 @@ require('global_function.php');
 //require_once('scrap_details.php');
 use Bing\Client;
      
-     $movie_name = "batmanandsupermandawnofjustice";
-     $movie_link = "http://www.ticketnew.com/Kali-Movie-Tickets-Online-Show-Timings/Online-Advance-Booking/13245/C/Chennai";
+     $movie_name = "Zero";
+     $movie_link = "http://www.ticketnew.com/Zero-Movie-Tickets-Online-Show-Timings/Online-Advance-Booking/10378/C/Chennai";
      $search_type = "Movie";
      
-     $lang = "English";
+     $lang = "Tamil";
      
+     
+     /*
      $movie_name2 = "batman&supermandawnofjustice";
      similar_text($movie_name, $movie_name2, $p); 
      echo "Percent: $p"; 
+   */
    
    
-   /*
    $movie_details=array();
    $movie_details=getMovieDetails($movie_name,$movie_link,$lang,"tktnew");
    
    print_r($movie_details);
-   */
+   
    
    
    

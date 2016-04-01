@@ -1,0 +1,94 @@
+Upcoming Extract Job Started on 2016/03/31 15:49:46
+Array
+(
+    [Tamil] => Array
+        (
+            [0] => KO 2
+            [1] => Marma Manithan
+            [2] => Idhu Namma Aalu
+            [3] => Adanga Pasanga
+            [4] => Zero
+            [5] => Amavasai
+            [6] => Iraivi
+            [7] => Atharmavettai
+            [8] => Aruntha Pathiee
+            [9] => Andava Kaanom
+        )
+
+    [Hindi] => Array
+        (
+            [0] => Haramkhor
+            [1] => Ranbanka
+            [2] => Paani
+        )
+
+    [English] => Array
+        (
+            [0] => The 33
+            [1] => Spotlight
+            [2] => Rings
+            [3] => Miss You Already
+            [4] => Brooklyn
+            [5] => By The Sea
+            [6] => Trumbo
+        )
+
+    [Telugu] => Array
+        (
+            [0] => Natho Nenu
+            [1] => Aditya
+            [2] => Alexander IPS
+            [3] => Maa Nanna Police
+            [4] => Advocate Anuradha Verma
+            [5] => Gulabi
+            [6] => Tapori
+        )
+
+)
+Array
+(
+    [Tamil] => Array
+        (
+            [0] => http://www.ticketnew.com/KO-2-Movie-Tickets-Online-Booking-Show-Timings/Release-Date/11779
+            [1] => http://www.ticketnew.com/Marma-Manithan-Movie-Tickets-Online-Booking-Show-Timings/Release-Date/11327
+            [2] => http://www.ticketnew.com/Idhu-Namma-Aalu-Movie-Tickets-Online-Booking-Show-Timings/Release-Date/9156
+            [3] => http://www.ticketnew.com/Adanga-Pasanga-Movie-Tickets-Online-Booking-Show-Timings/Release-Date/12089
+            [4] => http://www.ticketnew.com/Zero-Movie-Tickets-Online-Booking-Show-Timings/Release-Date/10378
+            [5] => http://www.ticketnew.com/Amavasai-Movie-Tickets-Online-Booking-Show-Timings/Release-Date/12092
+            [6] => http://www.ticketnew.com/Iraivi-Movie-Tickets-Online-Booking-Show-Timings/Release-Date/11326
+            [7] => http://www.ticketnew.com/Atharmavettai-Movie-Tickets-Online-Booking-Show-Timings/Release-Date/12102
+            [8] => http://www.ticketnew.com/Aruntha-Pathiee--Movie-Tickets-Online-Booking-Show-Timings/Release-Date/12099
+            [9] => http://www.ticketnew.com/Andava-Kaanom--Movie-Tickets-Online-Booking-Show-Timings/Release-Date/12093
+        )
+
+    [Hindi] => Array
+        (
+            [0] => http://www.ticketnew.com/Haramkhor-Movie-Tickets-Online-Booking-Show-Timings/Release-Date/11654
+            [1] => http://www.ticketnew.com/Ranbanka--Movie-Tickets-Online-Booking-Show-Timings/Release-Date/12706
+            [2] => http://www.ticketnew.com/Paani-Movie-Tickets-Online-Booking-Show-Timings/Release-Date/4309
+        )
+
+    [English] => Array
+        (
+            [0] => http://www.ticketnew.com/The-33-Movie-Tickets-Online-Booking-Show-Timings/Release-Date/12680
+            [1] => http://www.ticketnew.com/Spotlight-Movie-Tickets-Online-Booking-Show-Timings/Release-Date/12659
+            [2] => http://www.ticketnew.com/Rings-Movie-Tickets-Online-Booking-Show-Timings/Release-Date/12315
+            [3] => http://www.ticketnew.com/Miss-You-Already-Movie-Tickets-Online-Booking-Show-Timings/Release-Date/7362
+            [4] => http://www.ticketnew.com/Brooklyn-Movie-Tickets-Online-Booking-Show-Timings/Release-Date/12658
+            [5] => http://www.ticketnew.com/By-The-Sea-Movie-Tickets-Online-Booking-Show-Timings/Release-Date/10653
+            [6] => http://www.ticketnew.com/Trumbo-Movie-Tickets-Online-Booking-Show-Timings/Release-Date/12314
+        )
+
+    [Telugu] => Array
+        (
+            [0] => http://www.ticketnew.com/Natho-Nenu-Movie-Tickets-Online-Booking-Show-Timings/Release-Date/8893
+            [1] => http://www.ticketnew.com/Aditya-Movie-Tickets-Online-Booking-Show-Timings/Release-Date/12718
+            [2] => http://www.ticketnew.com/Alexander-IPS-Movie-Tickets-Online-Booking-Show-Timings/Release-Date/3565
+            [3] => http://www.ticketnew.com/Maa-Nanna-Police-Movie-Tickets-Online-Booking-Show-Timings/Release-Date/8491
+            [4] => http://www.ticketnew.com/Advocate-Anuradha-Verma-Movie-Tickets-Online-Booking-Show-Timings/Release-Date/12708
+            [5] => http://www.ticketnew.com/Gulabi-Movie-Tickets-Online-Booking-Show-Timings/Release-Date/8493
+            [6] => http://www.ticketnew.com/Tapori-Movie-Tickets-Online-Booking-Show-Timings/Release-Date/7121
+        )
+
+)
+Upcoming Extract Job completed on 2016/03/31 15:49:46
