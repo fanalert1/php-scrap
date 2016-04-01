@@ -179,15 +179,31 @@ function getMovieDetails($movie_name,$movie_link,$lang,$callFrom)
    unset($movie_details);
    $movie_details=array();
    $movie_name=basic_clean($movie_name);
+   $year=date("Y");
    
    $imdb_url =  bingSearch($movie_name,$lang,"imdb");
+  // echo $imdb_url;
+   $result=explode("/",$imdb_url);
+   $imdb_title_id=$result[4];
+   $imdb_title_id=str_replace("tt","",$imdb_title_id);
+   echo $imdb_title_id;
+   
    if($imdb_url!="")
    {
        
+       $movie_details=get_imdb_det_id($imdb_title_id);
+       similar_text($movie_name, basic_clean($movie_details[0]["name"]), $p); 
+       // $p>80 && count($movie_details)==1 &&
+       if($p>80 && count($movie_details)==1 && array_key_exists("director", $movie_details[0]) && !empty($movie_details[0]["director"]) && $movie_details[0]["poster"]!="" && in_array($lang, $movie_details[0]["lang"]))
+       {
+       return $movie_details;
+       }
+   }
+   elseif($imdb_url=="") {
        $movie_details=get_imdb_det($movie_name);
-       echo $imdb_url."\n";
-       //print_r($movie_details);
-       if(count($movie_details)==1 && array_key_exists("director", $movie_details[0]) && !empty($movie_details[0]["director"]) && $movie_details[0]["poster"]!="" )
+       similar_text($movie_name, basic_clean($movie_details[0]["name"]), $p); 
+       // $p>80 && count($movie_details)==1 &&
+       if($p>80 && count($movie_details)==1 && array_key_exists("director", $movie_details[0]) && !empty($movie_details[0]["director"]) && $movie_details[0]["poster"]!="" && in_array($lang, $movie_details[0]["lang"]))
        {
        return $movie_details;
        }
@@ -212,22 +228,23 @@ function getMovieDetails($movie_name,$movie_link,$lang,$callFrom)
            if($p<80)
            {
               // $lang="2016 ".$lang;
-              echo "wiki title not matching";
-               $wiki_url = bingSearch($movie_name,$lang,"wiki","2016");
+               echo "wiki title not matching";
+               $wiki_url = bingSearch($movie_name,$lang,"wiki",$year);
                $movie_details[0]=wiki_scrap($movie_name,$wiki_url);
+               
            }
        
        
            if(array_key_exists("director", $movie_details[0]) && is_null($movie_details[0]["director"]))
            {
                echo "call1";
-               $wiki_url = bingSearch($movie_name,$lang,"wiki","2016");
+               $wiki_url = bingSearch($movie_name,$lang,"wiki",$year);
                $movie_details[0]=wiki_scrap($movie_name,$wiki_url);
            }
            else if(!array_key_exists("director", $movie_details[0]))
            {
                echo "call2";
-                $wiki_url = bingSearch($movie_name,$lang,"wiki","2016");
+                $wiki_url = bingSearch($movie_name,$lang,"wiki",$year);
                 $movie_details[0]=wiki_scrap($movie_name,$wiki_url);
                
            }
@@ -236,8 +253,13 @@ function getMovieDetails($movie_name,$movie_link,$lang,$callFrom)
            $release_ts=date("Y/m/d H:i:s",strtotime(tktnew_scrap($movie_name,$movie_link)));
            $movie_details[0]["release"]=$release_ts;
            }
-       
+      
+      similar_text($movie_name, basic_clean($movie_details[0]["wiki_title"]), $p);
+      
+      if($p>80)
+      {
       return $movie_details; 
+      }
      // }
    
    }
@@ -443,7 +465,7 @@ function bingSearch($movie_name,$lang,$source,$year="")
     {
     
          $url = $result["Url"];
-        // echo $url."\n";
+         // echo $url."\n";
          if (strpos($url, $site) !== false) 
          {
                 
@@ -463,6 +485,7 @@ function bingSearch($movie_name,$lang,$source,$year="")
          }
      
     }
+    $url="";
     return $url;
 }
 

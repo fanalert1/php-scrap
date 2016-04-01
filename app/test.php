@@ -7,7 +7,7 @@ require('global_function.php');
 //require_once('scrap_details.php');
 use Bing\Client;
      
-     $movie_name = "Zero";
+     $movie_name = "Narathan";
      $movie_link = "http://www.ticketnew.com/Zero-Movie-Tickets-Online-Show-Timings/Online-Advance-Booking/10378/C/Chennai";
      $search_type = "Movie";
      
@@ -19,10 +19,10 @@ use Bing\Client;
      similar_text($movie_name, $movie_name2, $p); 
      echo "Percent: $p"; 
    */
+  // $movie_details=get_imdb_det($movie_name);
    
-   
-   $movie_details=array();
-   $movie_details=getMovieDetails($movie_name,$movie_link,$lang,"tktnew");
+  $movie_details=array();
+  $movie_details=getMovieDetails($movie_name,$movie_link,$lang,"tktnew");
    
    print_r($movie_details);
    

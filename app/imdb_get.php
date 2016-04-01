@@ -1,6 +1,23 @@
 <?php
 require_once('../vendor/autoload.php');
 
+
+function get_imdb_det_id($id)
+{
+    $movie = new \Imdb\Title($id);
+    $movie_list[0]["name"] = $movie->title();
+    $movie_list[0]["imdbid"] = $movie->imdbid();
+    $movie_list[0]["synopsis"] = $movie->plotoutline();
+    $movie_list[0]["poster"]=$movie->photo();
+    $movie_list[0]["lang"]=$movie->languages();
+    $movie_list[0]["director"]=get_det_arr($movie->director());
+    $movie_list[0]["producer"]=get_det_arr($movie->producer());
+    $movie_list[0]["music"]=get_det_arr($movie->composer());
+    $movie_list[0]["cast"]=get_det_arr($movie->cast());
+    $movie_list[0]["release"]=get_release($movie->releaseInfo());
+    return $movie_list;
+}
+
 function get_imdb_det($movie_name)
 {
     $year = date("Y");
