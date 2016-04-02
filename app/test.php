@@ -7,11 +7,11 @@ require('global_function.php');
 //require_once('scrap_details.php');
 use Bing\Client;
      
-     $movie_name = "Narathan";
-     $movie_link = "http://www.ticketnew.com/Zero-Movie-Tickets-Online-Show-Timings/Online-Advance-Booking/10378/C/Chennai";
+     $movie_name = "Thozha";
+     $movie_link = "https://in.bookmyshow.com/chennai/movies/valeba-raja/ET00028995";
      $search_type = "Movie";
      
-     $lang = "Tamil";
+     $lang = "Malayalam";
      
      
      /*
@@ -22,7 +22,7 @@ use Bing\Client;
   // $movie_details=get_imdb_det($movie_name);
    
   $movie_details=array();
-  $movie_details=getMovieDetails($movie_name,$movie_link,$lang,"tktnew");
+  $movie_details=getMovieDetails($movie_name,$movie_link,$lang,"bms");
    
    print_r($movie_details);
    

@@ -105,7 +105,8 @@ function tktnew_scrap($name,$movie_link)
     $actor=explode(",",$cast_crew["Actors"][0]);
     $director=explode(",",$cast_crew["Director"][0]);
     $music=explode(",",$cast_crew["Music director"][0]);
-    
+    unset($GLOBALS["cast_crew"]);
+    unset($GLOBALS["key"]);
     $movie_details=array();
     $movie_details[$name]["cast"]=$actor;
     $movie_details[$name]["director"]=$director;
@@ -116,8 +117,8 @@ function tktnew_scrap($name,$movie_link)
     $movie_details[$name]["release"]=$release_ts;
     
    // print_r($movie_details);
-   // return $movie_details[$name]["release"]; //fix for array stacking issue
-   return $release_ts;
+   return $movie_details[$name]; //fix for array stacking issue
+   //return $release_ts;
     
 }
 
@@ -220,9 +221,73 @@ function wiki_scrap($name,$url)
             
         });
 
-    return $cast_crew[$movie]; //fix to return that movie alone
+$movie_details = $cast_crew[$movie];//fix to return that movie alone
+unset($GLOBALS["cast_crew"]);
+unset($GLOBALS["movie"]);
+unset($GLOBALS["field"]);
+unset($GLOBALS["info"]);
+unset($GLOBALS["info1"]);
+
+return $movie_details;
 }
 
+function bms_scrap($movie_name,$movie_link)
+{
+    global $key, $cast_crew;
+    $movie_details= array();
+    //unset($GLOBALS["cast_crew"]);
+    //unset($GLOBALS["key"]);
+    $client = new Client();
+	$crawler = $client->request('GET', $movie_link);
+	$crawler->filter('body > div.main-body-wrapper > div.movie-synopsis-content-wrapper > div.mv-synopsis-wrapper > div.details > div.general-info > div.name-rating > h1.__name')->each(function (Crawler $node, $i) {
+	    global $key;
+	    $key = $node->text();
+	});
+	$movie_details["name"]=$key;
+	$crawler->filter('body > div.main-body-wrapper > div.movie-synopsis-content-wrapper > div.mv-synopsis-wrapper > div.details > div.general-info > div.date-time > div.calander-date > span.__release-date')->each(function (Crawler $node, $i) {
+	    global $key;
+	    $key = $node->text();
+	});
+	$movie_details["release_ts"]=$key;
+	//unset($GLOBALS["key"]);
+	$crawler->filter('body > div.main-body-wrapper > div.movie-synopsis-content-wrapper > div.mv-synopsis-wrapper > div.poster-container-wrapper > div > div.poster.wow > img')->each(function (Crawler $node, $i) {
+	    global $key;
+	    $key = "https:".$node->attr('data-src');
+	});
+	$movie_details["poster_url"]=$key;
+	//unset($GLOBALS["key"]);
+	$crawler->filter('#mv-summary > div.cast')->each(function (Crawler $node, $i) {
+	    $node->filter('div.__cast-member')->each(function ($node) {
+	        global $cast_crew;
+	        $cast_crew[]=$node->attr('content');
+	    });
+	});
+	$movie_details["cast"]=$cast_crew;
+	//unset($GLOBALS["cast_crew"]);
+	$crawler->filter('#mv-summary > div.synopsis')->each(function (Crawler $node, $i) {
+	    $node->filter('blockquote')->each(function ($node) {
+	        global $cast_crew;
+	        $cast_crew["synopsis"]=trim($node->text());
+	    });
+	    $node->filter('span.__director-name > a')->each(function ($node) {
+	        global $cast_crew;
+	        $cast_crew["director"][]=$node->text();
+	    });
+	    $node->filter('span.__composer-name > a')->each(function ($node) {
+	        global $cast_crew;
+	        $cast_crew["music"][]=$node->text();
+	    });
+	});
+	$movie_details["synopsis"]=$cast_crew["synopsis"];
+	$movie_details["director"]=$cast_crew["director"];
+	$movie_details["music"]=$cast_crew["music"];
+	//print_r($movie_details);
+	unset($GLOBALS["cast_crew"]);
+	unset($GLOBALS["key"]);
+	return $movie_details;
+	    
+}
 
+//bms_scrap("https://in.bookmyshow.com/chennai/movies/the-jungle-book-3d/ET00034007");
 
 ?>

@@ -46,6 +46,7 @@ function basic_clean($value)
     $value = str_replace('subtitle','',$value); // with English Subtitle
     $value = str_replace('dolbyatmos','',$value);
     $value = str_replace('film','',$value); //to remove film from wiki title
+    $value = trim($value);
     return $value;
     
 }
@@ -57,6 +58,7 @@ function getSearchString($value)
      $value = str_replace(' ','',$value); // Remove white space due to space
      $value = preg_replace('/\s+/','',$value); // Remove white space due to tab
      $value = preg_replace('/[^A-Za-z0-9\-]/', '', $value); // Removes special chars.
+     $value = str_replace('&','',$value); // for ki & kia, ki and kia
      $value = str_replace('-','',$value);
      $value = str_replace('2d','',$value);
      $value = str_replace('3d','',$value);
@@ -65,6 +67,7 @@ function getSearchString($value)
      $value = str_replace('subtitle','',$value); // with English Subtitle
      $value = str_replace('dolbyatmos','',$value);
      $value = str_replace('film','',$value);
+     $value = str_replace('and','',$value); // for ki & kia, ki and kia
      return $value;
 }
 
@@ -190,23 +193,35 @@ function getMovieDetails($movie_name,$movie_link,$lang,$callFrom)
    
    if($imdb_url!="")
    {
-       
+         
        $movie_details=get_imdb_det_id($imdb_title_id);
-       similar_text($movie_name, basic_clean($movie_details[0]["name"]), $p); 
-       // $p>80 && count($movie_details)==1 &&
-       if($p>80 && count($movie_details)==1 && array_key_exists("director", $movie_details[0]) && !empty($movie_details[0]["director"]) && $movie_details[0]["poster"]!="" && in_array($lang, $movie_details[0]["lang"]))
-       {
-       return $movie_details;
-       }
+       
    }
    elseif($imdb_url=="") {
        $movie_details=get_imdb_det($movie_name);
-       similar_text($movie_name, basic_clean($movie_details[0]["name"]), $p); 
-       // $p>80 && count($movie_details)==1 &&
-       if($p>80 && count($movie_details)==1 && array_key_exists("director", $movie_details[0]) && !empty($movie_details[0]["director"]) && $movie_details[0]["poster"]!="" && in_array($lang, $movie_details[0]["lang"]))
-       {
-       return $movie_details;
-       }
+   }
+   
+   similar_text($movie_name, basic_clean($movie_details[0]["name"]), $p); 
+   // $p>80 && count($movie_details)==1 &&
+   if($p>80 && count($movie_details)==1 && array_key_exists("director", $movie_details[0]) && !empty($movie_details[0]["director"]) && $movie_details[0]["poster"]!="" && in_array($lang, $movie_details[0]["lang"]))
+   {
+        if($callFrom=="tktnew")
+           {
+           
+            $tn_details=tktnew_scrap($movie_name,$movie_link);
+            $release_ts=date("Y/m/d H:i:s",strtotime($tn_details["release"]));
+            $movie_details[0]["release"]=$release_ts;
+           }
+        elseif($callFrom=="bms")
+           {
+          // $release_ts=date("Y/m/d H:i:s",strtotime(bms_scrap($movie_name,$movie_link)));
+          // $movie_details[0]["release"]=$release_ts;
+           $bms_details=bms_scrap($movie_name,$movie_link);
+           $release_ts=date("Y/m/d H:i:s",strtotime($bms_details["release_ts"]));
+           $movie_details[0]["release"]=$release_ts;  
+           }
+           
+        return $movie_details;
    }
    
    
@@ -220,17 +235,19 @@ function getMovieDetails($movie_name,$movie_link,$lang,$callFrom)
        unset($movie_details);
        $movie_details=array();
        $movie_details[0]=wiki_scrap($movie_name,$wiki_url);
-       
-       
+     //  echo $wiki_url;
+     //  print_r($movie_details);
      //  if($movie_details[0]["wiki_title"]!="")
      //  {
            similar_text($movie_name, basic_clean($movie_details[0]["wiki_title"]), $p); 
            if($p<80)
            {
               // $lang="2016 ".$lang;
+            //  echo $p."%";
                echo "wiki title not matching";
                $wiki_url = bingSearch($movie_name,$lang,"wiki",$year);
                $movie_details[0]=wiki_scrap($movie_name,$wiki_url);
+             //  echo $wiki_url;
                
            }
        
@@ -248,22 +265,48 @@ function getMovieDetails($movie_name,$movie_link,$lang,$callFrom)
                 $movie_details[0]=wiki_scrap($movie_name,$wiki_url);
                
            }
-           if($callFrom=="tktnew")
-           {
-           $release_ts=date("Y/m/d H:i:s",strtotime(tktnew_scrap($movie_name,$movie_link)));
-           $movie_details[0]["release"]=$release_ts;
-           }
+          
       
       similar_text($movie_name, basic_clean($movie_details[0]["wiki_title"]), $p);
       
       if($p>80)
       {
+          if($callFrom=="tktnew")
+           {
+            $tn_details=tktnew_scrap($movie_name,$movie_link);
+            $release_ts=date("Y/m/d H:i:s",strtotime($tn_details["release"]));
+            $movie_details[0]["release"]=$release_ts;
+           }
+          elseif($callFrom=="bms")
+           {
+           $bms_details=bms_scrap($movie_name,$movie_link);
+           $release_ts=date("Y/m/d H:i:s",strtotime($bms_details["release_ts"]));
+           $movie_details[0]["release"]=$release_ts;   
+           }
       return $movie_details; 
       }
      // }
    
    }
    
+   //if the movie info is not there in wiki or ticket new..get it from tn or bms itself...
+   //sometime info already set movies in wiki also come here. thozha..need special handling for that
+   
+   if($callFrom=="tktnew")
+   {
+   $tn_details=tktnew_scrap($movie_name,$movie_link);
+   $release_ts=date("Y/m/d H:i:s",strtotime($tn_details["release"]));
+   $movie_details[0]["release"]=$release_ts;
+   }
+  elseif($callFrom=="bms")
+   {
+   $bms_details=bms_scrap($movie_name,$movie_link);
+   $release_ts=date("Y/m/d H:i:s",strtotime($bms_details["release_ts"]));
+   $movie_details[0]["release"]=$release_ts;   
+   }
+   //echo "called here";
+   return $movie_details;
+   /*
    $fb_url =  bingSearch($movie_name,$lang,"filmibeat");
    if($filmibeat!="")
    {
@@ -274,7 +317,7 @@ function getMovieDetails($movie_name,$movie_link,$lang,$callFrom)
        print_r($movie_details);
        return $movie_details;
    }
-   
+   */
     
 }
 

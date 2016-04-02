@@ -1,5 +1,2150 @@
-Upcoming Extract Job Started on 2016/04/01 21:13:46
+Upcoming Extract Job Started on 2016/04/02 11:03:06
 Array
+(
+    [0] => Array
+        (
+            [name] => The Boss
+            [link] => https://in.bookmyshow.com/chennai/movies/the-boss/ET00035977
+            [lang] => Array
+                (
+                    [0] => English
+                )
+
+            [genre] => Array
+                (
+                    [0] => Comedy
+                )
+
+        )
+
+    [1] => Array
+        (
+            [name] => Love Games
+            [link] => https://in.bookmyshow.com/chennai/movies/love-games/ET00037301
+            [lang] => Array
+                (
+                    [0] => Hindi
+                )
+
+            [genre] => Array
+                (
+                    [0] => Adult
+                    [1] => Romance
+                    [2] => Thriller
+                )
+
+        )
+
+    [2] => Array
+        (
+            [name] => Dr Paramanandaiah Students Gang
+            [link] => https://in.bookmyshow.com/chennai/movies/dr-paramanandaiah-students-gang/ET00038365
+            [lang] => Array
+                (
+                    [0] => Telugu
+                )
+
+            [genre] => Array
+                (
+                    [0] => Comedy
+                )
+
+        )
+
+    [3] => Array
+        (
+            [name] => Chakravyuha 
+            [link] => https://in.bookmyshow.com/chennai/movies/chakravyuha/ET00017703
+            [lang] => Array
+                (
+                    [0] => Kannada
+                )
+
+            [genre] => Array
+                (
+                    [0] => Action
+                    [1] => Drama
+                    [2] => Romance
+                )
+
+        )
+
+    [4] => Array
+        (
+            [name] => The Jungle Book
+            [link] => https://in.bookmyshow.com/chennai/movies/the-jungle-book/ET00034007
+            [lang] => Array
+                (
+                    [0] => Hindi
+                    [1] =>  English
+                )
+
+            [genre] => Array
+                (
+                    [0] => Adventure
+                    [1] => Drama
+                    [2] => Fantasy
+                )
+
+        )
+
+    [5] => Array
+        (
+            [name] => Demolition
+            [link] => https://in.bookmyshow.com/chennai/movies/demolition/ET00039837
+            [lang] => Array
+                (
+                    [0] => English
+                )
+
+            [genre] => Array
+                (
+                    [0] => Comedy
+                    [1] => Drama
+                )
+
+        )
+
+    [6] => Array
+        (
+            [name] => Before I Wake
+            [link] => https://in.bookmyshow.com/chennai/movies/before-i-wake/ET00031459
+            [lang] => Array
+                (
+                    [0] => English
+                )
+
+            [genre] => Array
+                (
+                    [0] => Horror
+                    [1] => Thriller
+                )
+
+        )
+
+    [7] => Array
+        (
+            [name] => Mr. Right
+            [link] => https://in.bookmyshow.com/chennai/movies/mr-right/ET00040410
+            [lang] => Array
+                (
+                    [0] => English
+                )
+
+            [genre] => Array
+                (
+                    [0] => Action
+                    [1] => Comedy
+                    [2] => Romance
+                )
+
+        )
+
+    [8] => Array
+        (
+            [name] => The Blueberry Hunt
+            [link] => https://in.bookmyshow.com/chennai/movies/the-blueberry-hunt/ET00007642
+            [lang] => Array
+                (
+                    [0] => Hindi
+                    [1] => English
+                )
+
+            [genre] => Array
+                (
+                    [0] => Thriller
+                )
+
+        )
+
+    [9] => Array
+        (
+            [name] => Theri
+            [link] => https://in.bookmyshow.com/chennai/movies/theri/ET00036069
+            [lang] => Array
+                (
+                    [0] => Tamil
+                )
+
+            [genre] => Array
+                (
+                    [0] => Action
+                    [1] => Thriller
+                )
+
+        )
+
+    [10] => Array
+        (
+            [name] => Barbershop: The Next Cut
+            [link] => https://in.bookmyshow.com/chennai/movies/barbershop-the-next-cut/ET00035675
+            [lang] => Array
+                (
+                    [0] => English
+                )
+
+            [genre] => Array
+                (
+                    [0] => Comedy
+                )
+
+        )
+
+    [11] => Array
+        (
+            [name] => Criminal
+            [link] => https://in.bookmyshow.com/chennai/movies/criminal/ET00039095
+            [lang] => Array
+                (
+                    [0] => English
+                )
+
+            [genre] => Array
+                (
+                    [0] => Drama
+                )
+
+        )
+
+    [12] => Array
+        (
+            [name] => Fan
+            [link] => https://in.bookmyshow.com/chennai/movies/fan/ET00025074
+            [lang] => Array
+                (
+                    [0] => Hindi
+                )
+
+            [genre] => Array
+                (
+                    [0] => Drama
+                    [1] => Thriller
+                )
+
+        )
+
+    [13] => Array
+        (
+            [name] => The Meddler
+            [link] => https://in.bookmyshow.com/chennai/movies/the-meddler/ET00040407
+            [lang] => Array
+                (
+                    [0] => English
+                )
+
+            [genre] => Array
+                (
+                    [0] => Comedy
+                    [1] => Drama
+                )
+
+        )
+
+    [14] => Array
+        (
+            [name] => Cheater
+            [link] => https://in.bookmyshow.com/chennai/movies/cheater/ET00038353
+            [lang] => Array
+                (
+                    [0] => Marathi
+                )
+
+            [genre] => Array
+                (
+                    [0] => Comedy
+                )
+
+        )
+
+    [15] => Array
+        (
+            [name] => A Hologram for the King
+            [link] => https://in.bookmyshow.com/chennai/movies/a-hologram-for-the-king/ET00040403
+            [lang] => Array
+                (
+                    [0] => English
+                )
+
+            [genre] => Array
+                (
+                    [0] => Action
+                )
+
+        )
+
+    [16] => Array
+        (
+            [name] => Ratchet and Clank
+            [link] => https://in.bookmyshow.com/chennai/movies/ratchet-and-clank/ET00039094
+            [lang] => Array
+                (
+                    [0] => English
+                )
+
+            [genre] => Array
+                (
+                    [0] => Drama
+                )
+
+        )
+
+    [17] => Array
+        (
+            [name] => The Huntsman: Winter's War
+            [link] => https://in.bookmyshow.com/chennai/movies/the-huntsman-winters-war/ET00035848
+            [lang] => Array
+                (
+                    [0] => English
+                )
+
+            [genre] => Array
+                (
+                    [0] => Action
+                    [1] => Adventure
+                )
+
+        )
+
+    [18] => Array
+        (
+            [name] => Eddie The Eagle
+            [link] => https://in.bookmyshow.com/chennai/movies/eddie-the-eagle/ET00035388
+            [lang] => Array
+                (
+                    [0] => English
+                )
+
+            [genre] => Array
+                (
+                    [0] => Drama
+                    [1] => Sports 
+                )
+
+        )
+
+    [19] => Array
+        (
+            [name] => 7 Hours To Go
+            [link] => https://in.bookmyshow.com/chennai/movies/7-hours-to-go/ET00027830
+            [lang] => Array
+                (
+                    [0] => Hindi
+                )
+
+            [genre] => Array
+                (
+                    [0] => Action
+                    [1] => Suspense
+                    [2] => Thriller
+                )
+
+        )
+
+    [20] => Array
+        (
+            [name] => Raja Cheyyi Veste
+            [link] => https://in.bookmyshow.com/chennai/movies/raja-cheyyi-veste/ET00039126
+            [lang] => Array
+                (
+                    [0] => Telugu
+                )
+
+            [genre] => Array
+                (
+                    [0] => Action
+                    [1] => Romance
+                )
+
+        )
+
+    [21] => Array
+        (
+            [name] => Santa Banta Pvt Ltd
+            [link] => https://in.bookmyshow.com/chennai/movies/santa-banta-pvt-ltd/ET00038258
+            [lang] => Array
+                (
+                    [0] => Hindi
+                )
+
+            [genre] => Array
+                (
+                    [0] => Comedy
+                )
+
+        )
+
+    [22] => Array
+        (
+            [name] => Laal Rang
+            [link] => https://in.bookmyshow.com/chennai/movies/laal-rang/ET00037311
+            [lang] => Array
+                (
+                    [0] => Hindi
+                )
+
+            [genre] => Array
+                (
+                    [0] => Drama
+                    [1] => Thriller
+                )
+
+        )
+
+    [23] => Array
+        (
+            [name] => Nil Battey Sannata
+            [link] => https://in.bookmyshow.com/chennai/movies/nil-battey-sannata/ET00038274
+            [lang] => Array
+                (
+                    [0] => Hindi
+                )
+
+            [genre] => Array
+                (
+                    [0] => Drama
+                    [1] => Family
+                )
+
+        )
+
+    [24] => Array
+        (
+            [name] => One Night Stand
+            [link] => https://in.bookmyshow.com/chennai/movies/one-night-stand/ET00037691
+            [lang] => Array
+                (
+                    [0] => Hindi
+                )
+
+            [genre] => Array
+                (
+                    [0] => Adult
+                    [1] => Drama
+                    [2] => Romance
+                )
+
+        )
+
+    [25] => Array
+        (
+            [name] => Vaisakhi List
+            [link] => https://in.bookmyshow.com/chennai/movies/vaisakhi-list/ET00040323
+            [lang] => Array
+                (
+                    [0] => Punjabi
+                )
+
+            [genre] => Array
+                (
+                    [0] => Comedy
+                    [1] => Drama
+                )
+
+        )
+
+    [26] => Array
+        (
+            [name] => Killer Punjabi
+            [link] => https://in.bookmyshow.com/chennai/movies/killer-punjabi/ET00039674
+            [lang] => Array
+                (
+                    [0] => Punjabi
+                )
+
+            [genre] => Array
+                (
+                    [0] => Drama
+                )
+
+        )
+
+    [27] => Array
+        (
+            [name] => Brahmotsavam
+            [link] => https://in.bookmyshow.com/chennai/movies/brahmotsavam/ET00037443
+            [lang] => Array
+                (
+                    [0] => Telugu
+                )
+
+            [genre] => Array
+                (
+                    [0] => Drama
+                    [1] => Family
+                )
+
+        )
+
+    [28] => Array
+        (
+            [name] => Keanu
+            [link] => https://in.bookmyshow.com/chennai/movies/keanu/ET00035676
+            [lang] => Array
+                (
+                    [0] => English
+                )
+
+            [genre] => Array
+                (
+                    [0] => Comedy
+                )
+
+        )
+
+    [29] => Array
+        (
+            [name] => The Man Who Knew Infinity
+            [link] => https://in.bookmyshow.com/chennai/movies/the-man-who-knew-infinity/ET00040484
+            [lang] => Array
+                (
+                    [0] => English
+                )
+
+            [genre] => Array
+                (
+                    [0] => Biography
+                    [1] => Drama
+                )
+
+        )
+
+    [30] => Array
+        (
+            [name] => Mother's Day
+            [link] => https://in.bookmyshow.com/chennai/movies/mothers-day/ET00039836
+            [lang] => Array
+                (
+                    [0] => English
+                )
+
+            [genre] => Array
+                (
+                    [0] => Comedy
+                )
+
+        )
+
+    [31] => Array
+        (
+            [name] => Baaghi
+            [link] => https://in.bookmyshow.com/chennai/movies/baaghi/ET00035721
+            [lang] => Array
+                (
+                    [0] => Hindi
+                )
+
+            [genre] => Array
+                (
+                    [0] => Action
+                    [1] => Romance
+                )
+
+        )
+
+    [32] => Array
+        (
+            [name] => Shortcut Safaari
+            [link] => https://in.bookmyshow.com/chennai/movies/shortcut-safaari/ET00039250
+            [lang] => Array
+                (
+                    [0] => Hindi
+                )
+
+            [genre] => Array
+                (
+                    [0] => Adventure
+                    [1] => Drama
+                )
+
+        )
+
+    [33] => Array
+        (
+            [name] => Mellisai
+            [link] => https://in.bookmyshow.com/chennai/movies/mellisai/ET00025928
+            [lang] => Array
+                (
+                    [0] => Tamil
+                )
+
+            [genre] => Array
+                (
+                    [0] => Action
+                    [1] => Thriller
+                )
+
+        )
+
+    [34] => Array
+        (
+            [name] => Kabali
+            [link] => https://in.bookmyshow.com/chennai/movies/kabali/ET00039091
+            [lang] => Array
+                (
+                    [0] => Tamil
+                )
+
+            [genre] => Array
+                (
+                    [0] => Action
+                    [1] => Drama
+                )
+
+        )
+
+    [35] => Array
+        (
+            [name] => Friend Request
+            [link] => https://in.bookmyshow.com/chennai/movies/friend-request/ET00036935
+            [lang] => Array
+                (
+                    [0] => English
+                )
+
+            [genre] => Array
+                (
+                    [0] => Thriller
+                )
+
+        )
+
+    [36] => Array
+        (
+            [name] => Udta Punjab
+            [link] => https://in.bookmyshow.com/chennai/movies/udta-punjab/ET00030869
+            [lang] => Array
+                (
+                    [0] => Hindi
+                )
+
+            [genre] => Array
+                (
+                    [0] => Action
+                    [1] => Thriller
+                )
+
+        )
+
+    [37] => Array
+        (
+            [name] => Idhu Namma Aalu
+            [link] => https://in.bookmyshow.com/chennai/movies/idhu-namma-aalu/ET00023554
+            [lang] => Array
+                (
+                    [0] => Tamil
+                )
+
+            [genre] => Array
+                (
+                    [0] => Comedy
+                    [1] => Romance
+                )
+
+        )
+
+    [38] => Array
+        (
+            [name] => Precious Cargo
+            [link] => https://in.bookmyshow.com/chennai/movies/precious-cargo/ET00039296
+            [lang] => Array
+                (
+                    [0] => English
+                )
+
+            [genre] => Array
+                (
+                    [0] => Action
+                )
+
+        )
+
+    [39] => Array
+        (
+            [name] => Mauli
+            [link] => https://in.bookmyshow.com/chennai/movies/mauli/ET00030119
+            [lang] => Array
+                (
+                    [0] => Marathi
+                )
+
+            [genre] => Array
+                (
+                    [0] => Action
+                    [1] => Drama
+                )
+
+        )
+
+    [40] => Array
+        (
+            [name] => Dhillukku Dhuttu
+            [link] => https://in.bookmyshow.com/chennai/movies/dhillukku-dhuttu/ET00037926
+            [lang] => Array
+                (
+                    [0] => Tamil
+                )
+
+            [genre] => Array
+                (
+                    [0] => Drama
+                )
+
+        )
+
+    [41] => Array
+        (
+            [name] => Gali Brothers
+            [link] => https://in.bookmyshow.com/chennai/movies/gali-brothers/ET00038247
+            [lang] => Array
+                (
+                    [0] => Telugu
+                )
+
+            [genre] => Array
+                (
+                    [0] => Action
+                    [1] => Drama
+                )
+
+        )
+
+    [42] => Array
+        (
+            [name] => Supreme
+            [link] => https://in.bookmyshow.com/chennai/movies/supreme/ET00037449
+            [lang] => Array
+                (
+                    [0] => Telugu
+                )
+
+            [genre] => Array
+                (
+                    [0] => Drama
+                )
+
+        )
+
+    [43] => Array
+        (
+            [name] => Halal
+            [link] => https://in.bookmyshow.com/chennai/movies/halal/ET00038352
+            [lang] => Array
+                (
+                    [0] => Marathi
+                )
+
+            [genre] => Array
+                (
+                    [0] => Drama
+                )
+
+        )
+
+    [44] => Array
+        (
+            [name] => Style King
+            [link] => https://in.bookmyshow.com/chennai/movies/style-king/ET00038243
+            [lang] => Array
+                (
+                    [0] => Kannada
+                )
+
+            [genre] => Array
+                (
+                    [0] => Action
+                    [1] => Comedy
+                    [2] => Romance
+                )
+
+        )
+
+    [45] => Array
+        (
+            [name] => Iraivi
+            [link] => https://in.bookmyshow.com/chennai/movies/iraivi/ET00037492
+            [lang] => Array
+                (
+                    [0] => Tamil
+                )
+
+            [genre] => Array
+                (
+                    [0] => Drama
+                )
+
+        )
+
+    [46] => Array
+        (
+            [name] => & Jara Hatke
+            [link] => https://in.bookmyshow.com/chennai/movies/-jara-hatke/ET00038239
+            [lang] => Array
+                (
+                    [0] => Marathi
+                )
+
+            [genre] => Array
+                (
+                    [0] => Drama
+                    [1] => Romance
+                )
+
+        )
+
+    [47] => Array
+        (
+            [name] => Sarrainodu
+            [link] => https://in.bookmyshow.com/chennai/movies/sarrainodu/ET00038117
+            [lang] => Array
+                (
+                    [0] => Telugu
+                )
+
+            [genre] => Array
+                (
+                    [0] => Action
+                    [1] => Drama
+                )
+
+        )
+
+    [48] => Array
+        (
+            [name] => Dheepan
+            [link] => https://in.bookmyshow.com/chennai/movies/dheepan/ET00039384
+            [lang] => Array
+                (
+                    [0] => Tamil
+                )
+
+            [genre] => Array
+                (
+                    [0] => Drama
+                )
+
+        )
+
+    [49] => Array
+        (
+            [name] => Oru Melliya Kodu
+            [link] => https://in.bookmyshow.com/chennai/movies/oru-melliya-kodu/ET00037464
+            [lang] => Array
+                (
+                    [0] => Tamil
+                )
+
+            [genre] => Array
+                (
+                    [0] => Action
+                    [1] => Mystery
+                    [2] => Thriller
+                )
+
+        )
+
+    [50] => Array
+        (
+            [name] => Kotigobba 2 
+            [link] => https://in.bookmyshow.com/chennai/movies/kotigobba-2/ET00015347
+            [lang] => Array
+                (
+                    [0] => Kannada
+                )
+
+            [genre] => Array
+                (
+                    [0] => Action
+                    [1] => Drama
+                )
+
+        )
+
+    [51] => Array
+        (
+            [name] => Sadhuram 2
+            [link] => https://in.bookmyshow.com/chennai/movies/sadhuram-2/ET00039772
+            [lang] => Array
+                (
+                    [0] => Tamil
+                )
+
+            [genre] => Array
+                (
+                    [0] => Action
+                )
+
+        )
+
+    [52] => Array
+        (
+            [name] => Doddmane Huduga
+            [link] => https://in.bookmyshow.com/chennai/movies/doddmane-huduga/ET00025331
+            [lang] => Array
+                (
+                    [0] => Kannada
+                )
+
+            [genre] => Array
+                (
+                    [0] => Action
+                    [1] => Romance
+                )
+
+        )
+
+    [53] => Array
+        (
+            [name] => Akira
+            [link] => https://in.bookmyshow.com/chennai/movies/akira-kannada/ET00035978
+            [lang] => Array
+                (
+                    [0] => Kannada
+                )
+
+            [genre] => Array
+                (
+                    [0] => Drama
+                )
+
+        )
+
+    [54] => Array
+        (
+            [name] => Oyee
+            [link] => https://in.bookmyshow.com/chennai/movies/oyee/ET00040167
+            [lang] => Array
+                (
+                    [0] => Tamil
+                )
+
+            [genre] => Array
+                (
+                    [0] => Comedy
+                    [1] => Romance
+                )
+
+        )
+
+    [55] => Array
+        (
+            [name] => Pulimurugan
+            [link] => https://in.bookmyshow.com/chennai/movies/pulimurugan/ET00037929
+            [lang] => Array
+                (
+                    [0] => Malayalam
+                )
+
+            [genre] => Array
+                (
+                    [0] => Action
+                    [1] => Drama
+                    [2] => Thriller
+                )
+
+        )
+
+    [56] => Array
+        (
+            [name] => Chennai 600028 Second Innings
+            [link] => https://in.bookmyshow.com/chennai/movies/chennai-600028-second-innings/ET00039366
+            [lang] => Array
+                (
+                    [0] => Tamil
+                )
+
+            [genre] => Array
+                (
+                    [0] => Drama
+                )
+
+        )
+
+    [57] => Array
+        (
+            [name] => Bruce Lee
+            [link] => https://in.bookmyshow.com/chennai/movies/bruce-lee/ET00035866
+            [lang] => Array
+                (
+                    [0] => Tamil
+                )
+
+            [genre] => Array
+                (
+                    [0] => Action
+                    [1] => Comedy
+                )
+
+        )
+
+    [58] => Array
+        (
+            [name] => Jacobinte Swargarajyam
+            [link] => https://in.bookmyshow.com/chennai/movies/jacobinte-swargarajyam/ET00038665
+            [lang] => Array
+                (
+                    [0] => Malayalam
+                )
+
+            [genre] => Array
+                (
+                    [0] => Drama
+                    [1] => Family
+                )
+
+        )
+
+    [59] => Array
+        (
+            [name] => Elvis & Nixon
+            [link] => https://in.bookmyshow.com/chennai/movies/elvis-nixon/ET00039199
+            [lang] => Array
+                (
+                    [0] => English
+                )
+
+            [genre] => Array
+                (
+                    [0] => Comedy
+                )
+
+        )
+
+    [60] => Array
+        (
+            [name] => Captain America: Civil War
+            [link] => https://in.bookmyshow.com/chennai/movies/captain-america-civil-war/ET00036128
+            [lang] => Array
+                (
+                    [0] => English
+                )
+
+            [genre] => Array
+                (
+                    [0] => Action
+                    [1] => Sci-Fi
+                    [2] => Thriller
+                )
+
+        )
+
+    [61] => Array
+        (
+            [name] => Buddha in a Traffic Jam
+            [link] => https://in.bookmyshow.com/chennai/movies/buddha-in-a-traffic-jam/ET00039671
+            [lang] => Array
+                (
+                    [0] => Hindi
+                )
+
+            [genre] => Array
+                (
+                    [0] => Drama
+                )
+
+        )
+
+    [62] => Array
+        (
+            [name] => Going in Style
+            [link] => https://in.bookmyshow.com/chennai/movies/going-in-style/ET00035677
+            [lang] => Array
+                (
+                    [0] => English
+                )
+
+            [genre] => Array
+                (
+                    [0] => Adventure
+                    [1] => Comedy
+                )
+
+        )
+
+    [63] => Array
+        (
+            [name] => Zorawar
+            [link] => https://in.bookmyshow.com/chennai/movies/zorawar/ET00039805
+            [lang] => Array
+                (
+                    [0] => Punjabi
+                )
+
+            [genre] => Array
+                (
+                    [0] => Action
+                    [1] => Drama
+                    [2] => Romance
+                )
+
+        )
+
+    [64] => Array
+        (
+            [name] => Money Monster
+            [link] => https://in.bookmyshow.com/chennai/movies/money-monster/ET00037169
+            [lang] => Array
+                (
+                    [0] => English
+                )
+
+            [genre] => Array
+                (
+                    [0] => Drama
+                    [1] => Thriller
+                )
+
+        )
+
+    [65] => Array
+        (
+            [name] => Free State of Jones
+            [link] => https://in.bookmyshow.com/chennai/movies/free-state-of-jones/ET00038133
+            [lang] => Array
+                (
+                    [0] => English
+                )
+
+            [genre] => Array
+                (
+                    [0] => Action
+                    [1] => War
+                )
+
+        )
+
+    [66] => Array
+        (
+            [name] => Kindergarten Cop 2
+            [link] => https://in.bookmyshow.com/chennai/movies/kindergarten-cop-2/ET00039121
+            [lang] => Array
+                (
+                    [0] => English
+                )
+
+            [genre] => Array
+                (
+                    [0] => Drama
+                )
+
+        )
+
+    [67] => Array
+        (
+            [name] => X-Men: Apocalypse
+            [link] => https://in.bookmyshow.com/chennai/movies/x-men-apocalypse-imax-3d/ET00029820
+            [lang] => Array
+                (
+                    [0] => English
+                )
+
+            [genre] => Array
+                (
+                    [0] => Action
+                    [1] => Adventure
+                    [2] => Fantasy
+                )
+
+        )
+
+    [68] => Array
+        (
+            [name] => Sarbjit
+            [link] => https://in.bookmyshow.com/chennai/movies/sarbjit/ET00035934
+            [lang] => Array
+                (
+                    [0] => Hindi
+                )
+
+            [genre] => Array
+                (
+                    [0] => Biography
+                    [1] => Drama
+                )
+
+        )
+
+    [69] => Array
+        (
+            [name] => The Angry Birds Movie
+            [link] => https://in.bookmyshow.com/chennai/movies/the-angry-birds-movie-3d/ET00027142
+            [lang] => Array
+                (
+                    [0] => Hindi
+                    [1] =>  English
+                )
+
+            [genre] => Array
+                (
+                    [0] => Action
+                    [1] => Animation
+                    [2] => Comedy
+                )
+
+        )
+
+    [70] => Array
+        (
+            [name] => Alice Through The Looking Glass
+            [link] => https://in.bookmyshow.com/chennai/movies/alice-through-the-looking-glass/ET00036129
+            [lang] => Array
+                (
+                    [0] => English
+                )
+
+            [genre] => Array
+                (
+                    [0] => Adventure
+                    [1] => Family
+                    [2] => Fantasy
+                )
+
+        )
+
+    [71] => Array
+        (
+            [name] => Saadey CM Saab
+            [link] => https://in.bookmyshow.com/chennai/movies/saadey-cm-saab/ET00035139
+            [lang] => Array
+                (
+                    [0] => Punjabi
+                )
+
+            [genre] => Array
+                (
+                    [0] => Action
+                    [1] => Comedy
+                    [2] => Thriller
+                )
+
+        )
+
+    [72] => Array
+        (
+            [name] => The Nice Guys
+            [link] => https://in.bookmyshow.com/chennai/movies/the-nice-guys/ET00040428
+            [lang] => Array
+                (
+                    [0] => English
+                )
+
+            [genre] => Array
+                (
+                    [0] => Drama
+                )
+
+        )
+
+    [73] => Array
+        (
+            [name] => Vetrivel
+            [link] => https://in.bookmyshow.com/chennai/movies/vetrivel/ET00039369
+            [lang] => Array
+                (
+                    [0] => Tamil
+                )
+
+            [genre] => Array
+                (
+                    [0] => Drama
+                )
+
+        )
+
+    [74] => Array
+        (
+            [name] => Oru Pakka Kathai
+            [link] => https://in.bookmyshow.com/chennai/movies/oru-pakka-kathai/ET00038424
+            [lang] => Array
+                (
+                    [0] => Tamil
+                )
+
+            [genre] => Array
+                (
+                    [0] => Drama
+                    [1] => Romance
+                )
+
+        )
+
+    [75] => Array
+        (
+            [name] => Amma Kanakku
+            [link] => https://in.bookmyshow.com/chennai/movies/amma-kanakku/ET00039861
+            [lang] => Array
+                (
+                    [0] => Tamil
+                )
+
+            [genre] => Array
+                (
+                    [0] => Drama
+                )
+
+        )
+
+    [76] => Array
+        (
+            [name] => Motta Siva Ketta Siva
+            [link] => https://in.bookmyshow.com/chennai/movies/motta-siva-ketta-siva/ET00039728
+            [lang] => Array
+                (
+                    [0] => Tamil
+                )
+
+            [genre] => Array
+                (
+                    [0] => Drama
+                )
+
+        )
+
+    [77] => Array
+        (
+            [name] => Sairat
+            [link] => https://in.bookmyshow.com/chennai/movies/sairat/ET00033662
+            [lang] => Array
+                (
+                    [0] => Marathi
+                )
+
+            [genre] => Array
+                (
+                    [0] => Drama
+                    [1] => Romance
+                )
+
+        )
+
+    [78] => Array
+        (
+            [name] => Azhar
+            [link] => https://in.bookmyshow.com/chennai/movies/azhar/ET00030627
+            [lang] => Array
+                (
+                    [0] => Hindi
+                )
+
+            [genre] => Array
+                (
+                    [0] => Biography
+                    [1] => Drama
+                    [2] => Sports 
+                )
+
+        )
+
+    [79] => Array
+        (
+            [name] => Power
+            [link] => https://in.bookmyshow.com/chennai/movies/power/ET00014976
+            [lang] => Array
+                (
+                    [0] => Hindi
+                )
+
+            [genre] => Array
+                (
+                    [0] => Crime
+                    [1] => Thriller
+                )
+
+        )
+
+    [80] => Array
+        (
+            [name] => A Flying Jatt
+            [link] => https://in.bookmyshow.com/chennai/movies/a-flying-jatt/ET00035919
+            [lang] => Array
+                (
+                    [0] => Hindi
+                )
+
+            [genre] => Array
+                (
+                    [0] => Action
+                    [1] => Romance
+                    [2] => Thriller
+                )
+
+        )
+
+    [81] => Array
+        (
+            [name] => 24
+            [link] => https://in.bookmyshow.com/chennai/movies/24/ET00036004
+            [lang] => Array
+                (
+                    [0] => Tamil
+                    [1] =>  Telugu
+                )
+
+            [genre] => Array
+                (
+                    [0] => Action
+                    [1] => Sci-Fi
+                )
+
+        )
+
+    [82] => Array
+        (
+            [name] => Cabaret
+            [link] => https://in.bookmyshow.com/chennai/movies/cabaret/ET00026223
+            [lang] => Array
+                (
+                    [0] => Hindi
+                )
+
+            [genre] => Array
+                (
+                    [0] => Drama
+                    [1] => Musical
+                    [2] => Romance
+                )
+
+        )
+
+    [83] => Array
+        (
+            [name] => Thodari
+            [link] => https://in.bookmyshow.com/chennai/movies/thodari/ET00040319
+            [lang] => Array
+                (
+                    [0] => Tamil
+                )
+
+            [genre] => Array
+                (
+                    [0] => Drama
+                )
+
+        )
+
+    [84] => Array
+        (
+            [name] => Achcham Yenbadhu Madamaiyada
+            [link] => https://in.bookmyshow.com/chennai/movies/achcham-yenbadhu-madamaiyada/ET00037448
+            [lang] => Array
+                (
+                    [0] => Tamil
+                )
+
+            [genre] => Array
+                (
+                    [0] => Action
+                    [1] => Romance
+                    [2] => Thriller
+                )
+
+        )
+
+    [85] => Array
+        (
+            [name] => Fraud Saiyyan
+            [link] => https://in.bookmyshow.com/chennai/movies/fraud-saiyyan/ET00025679
+            [lang] => Array
+                (
+                    [0] => Hindi
+                )
+
+            [genre] => Array
+                (
+                    [0] => Comedy
+                )
+
+        )
+
+    [86] => Array
+        (
+            [name] => A...Aa
+            [link] => https://in.bookmyshow.com/chennai/movies/aaa/ET00037453
+            [lang] => Array
+                (
+                    [0] => Telugu
+                )
+
+            [genre] => Array
+                (
+                    [0] => Comedy
+                    [1] => Romance
+                )
+
+        )
+
+    [87] => Array
+        (
+            [name] => Ko 2
+            [link] => https://in.bookmyshow.com/chennai/movies/ko-2/ET00034038
+            [lang] => Array
+                (
+                    [0] => Tamil
+                )
+
+            [genre] => Array
+                (
+                    [0] => Drama
+                )
+
+        )
+
+    [88] => Array
+        (
+            [name] => Wagah
+            [link] => https://in.bookmyshow.com/chennai/movies/wagah/ET00035828
+            [lang] => Array
+                (
+                    [0] => Tamil
+                )
+
+            [genre] => Array
+                (
+                    [0] => Drama
+                )
+
+        )
+
+    [89] => Array
+        (
+            [name] => Saahasam Swaasaga Saagipo
+            [link] => https://in.bookmyshow.com/chennai/movies/saahasam-swaasaga-saagipo/ET00036131
+            [lang] => Array
+                (
+                    [0] => Telugu
+                )
+
+            [genre] => Array
+                (
+                    [0] => Action
+                    [1] => Romance
+                    [2] => Thriller
+                )
+
+        )
+
+    [90] => Array
+        (
+            [name] => Baywatch
+            [link] => https://in.bookmyshow.com/chennai/movies/baywatch/ET00039298
+            [lang] => Array
+                (
+                    [0] => English
+                )
+
+            [genre] => Array
+                (
+                    [0] => Comedy
+                )
+
+        )
+
+)
+Array
+(
+    [0] => English
+)
+
+Movie FoundArray
+(
+    [0] => Hindi
+)
+
+Movie FoundArray
 (
     [0] => Telugu
 )
+
+Movie FoundArray
+(
+    [0] => Kannada
+)
+
+Movie FoundArray
+(
+    [0] => Hindi
+    [1] =>  English
+)
+
+Movie Found
+Movie FoundArray
+(
+    [0] => English
+)
+
+Movie FoundArray
+(
+    [0] => English
+)
+
+Movie FoundArray
+(
+    [0] => English
+)
+
+Movie FoundArray
+(
+    [0] => Hindi
+    [1] => English
+)
+
+Movie Found
+Movie FoundArray
+(
+    [0] => Tamil
+)
+
+Movie FoundArray
+(
+    [0] => English
+)
+
+Movie FoundArray
+(
+    [0] => English
+)
+
+Movie FoundArray
+(
+    [0] => Hindi
+)
+
+Movie FoundArray
+(
+    [0] => English
+)
+
+Movie FoundArray
+(
+    [0] => Marathi
+)
+
+Movie FoundArray
+(
+    [0] => English
+)
+
+Movie FoundArray
+(
+    [0] => English
+)
+
+Movie FoundArray
+(
+    [0] => English
+)
+
+Movie FoundArray
+(
+    [0] => English
+)
+
+Movie FoundArray
+(
+    [0] => Hindi
+)
+
+Movie FoundArray
+(
+    [0] => Telugu
+)
+
+Movie FoundArray
+(
+    [0] => Hindi
+)
+
+Movie FoundArray
+(
+    [0] => Hindi
+)
+
+Movie FoundArray
+(
+    [0] => Hindi
+)
+
+Movie FoundArray
+(
+    [0] => Hindi
+)
+
+Movie FoundArray
+(
+    [0] => Punjabi
+)
+
+Movie FoundArray
+(
+    [0] => Punjabi
+)
+
+Movie FoundArray
+(
+    [0] => Telugu
+)
+
+Movie FoundArray
+(
+    [0] => English
+)
+
+Movie FoundArray
+(
+    [0] => English
+)
+
+Movie FoundArray
+(
+    [0] => English
+)
+
+Movie FoundArray
+(
+    [0] => Hindi
+)
+
+Movie FoundArray
+(
+    [0] => Hindi
+)
+
+Movie FoundArray
+(
+    [0] => Tamil
+)
+
+Movie FoundArray
+(
+    [0] => Tamil
+)
+
+Movie FoundArray
+(
+    [0] => English
+)
+
+Movie FoundArray
+(
+    [0] => Hindi
+)
+
+Movie FoundArray
+(
+    [0] => Tamil
+)
+
+Movie FoundArray
+(
+    [0] => English
+)
+
+Movie FoundArray
+(
+    [0] => Marathi
+)
+
+Movie FoundArray
+(
+    [0] => Tamil
+)
+
+Movie FoundArray
+(
+    [0] => Telugu
+)
+
+Movie FoundArray
+(
+    [0] => Telugu
+)
+
+Movie FoundArray
+(
+    [0] => Marathi
+)
+
+Movie FoundArray
+(
+    [0] => Kannada
+)
+
+Movie FoundArray
+(
+    [0] => Tamil
+)
+
+Movie FoundArray
+(
+    [0] => Marathi
+)
+
+Movie FoundArray
+(
+    [0] => Telugu
+)
+
+Movie FoundArray
+(
+    [0] => Tamil
+)
+
+Movie FoundArray
+(
+    [0] => Tamil
+)
+
+Movie FoundArray
+(
+    [0] => Kannada
+)
+
+Movie FoundArray
+(
+    [0] => Tamil
+)
+
+Movie FoundArray
+(
+    [0] => Kannada
+)
+
+Movie FoundArray
+(
+    [0] => Kannada
+)
+
+Movie FoundArray
+(
+    [0] => Tamil
+)
+
+Movie FoundArray
+(
+    [0] => Malayalam
+)
+
+Movie FoundArray
+(
+    [0] => Tamil
+)
+
+Movie FoundArray
+(
+    [0] => Tamil
+)
+
+Movie FoundArray
+(
+    [0] => Malayalam
+)
+
+Movie FoundArray
+(
+    [0] => English
+)
+
+Movie FoundArray
+(
+    [0] => English
+)
+
+Movie FoundArray
+(
+    [0] => Hindi
+)
+
+Movie FoundArray
+(
+    [0] => English
+)
+
+Movie FoundArray
+(
+    [0] => Punjabi
+)
+
+Movie FoundArray
+(
+    [0] => English
+)
+
+Movie FoundArray
+(
+    [0] => English
+)
+
+Movie FoundArray
+(
+    [0] => English
+)
+
+Movie FoundArray
+(
+    [0] => English
+)
+
+Movie FoundArray
+(
+    [0] => Hindi
+)
+
+Movie FoundArray
+(
+    [0] => Hindi
+    [1] =>  English
+)
+
+Movie Found
+Movie FoundArray
+(
+    [0] => English
+)
+
+Movie FoundArray
+(
+    [0] => Punjabi
+)
+
+Movie FoundArray
+(
+    [0] => English
+)
+
+Movie FoundArray
+(
+    [0] => Tamil
+)
+
+Movie FoundArray
+(
+    [0] => Tamil
+)
+
+Movie FoundArray
+(
+    [0] => Tamil
+)
+
+Movie FoundArray
+(
+    [0] => Tamil
+)
+
+Movie FoundArray
+(
+    [0] => Marathi
+)
+
+Movie FoundArray
+(
+    [0] => Hindi
+)
+
+Movie FoundArray
+(
+    [0] => Hindi
+)
+
+Movie FoundArray
+(
+    [0] => Hindi
+)
+
+Movie FoundArray
+(
+    [0] => Tamil
+    [1] =>  Telugu
+)
+
+Movie Found
+Movie FoundArray
+(
+    [0] => Hindi
+)
+
+Movie FoundArray
+(
+    [0] => Tamil
+)
+
+Movie FoundArray
+(
+    [0] => Tamil
+)
+
+Movie FoundArray
+(
+    [0] => Hindi
+)
+
+Movie FoundArray
+(
+    [0] => Telugu
+)
+
+Movie FoundArray
+(
+    [0] => Tamil
+)
+
+Movie FoundArray
+(
+    [0] => Tamil
+)
+
+Movie FoundArray
+(
+    [0] => Telugu
+)
+
+Movie FoundArray
+(
+    [0] => English
+)
+
+Movie Found
+BookMyShow Upcoming Extract Job completed on 2016/04/02 11:03:08
+Array
+(
+    [0] => KO 2
+    [1] => Marma Manithan
+    [2] => Idhu Namma Aalu
+    [3] => Adanga Pasanga
+    [4] => Zero
+    [5] => Amavasai
+    [6] => Iraivi
+    [7] => Atharmavettai
+    [8] => Aruntha Pathiee
+    [9] => Andava Kaanom
+)
+
+Movie Found
+KO 256ff54d9f74786569e25073cupcomingnull
+Movie not found. going for pattern match
+ma an
+marma manithan film imdb1411894marma manithan film wikipediawiki title not matchingmarma manithan 2016 film wikipediamarma manithan filmibeat
+Movie Found
+Movie Found
+Idhu Namma Aalu56ff532cf74786569e250708upcomingnull
+Movie not found. going for pattern match
+ad ga
+adanga pasanga film imdb1804623adanga pasanga film wikipediawiki title not matchingadanga pasanga 2016 film wikipediaadanga pasanga filmibeat
+Movie Found
+Movie not found. going for pattern match
+ze ro
+zero film imdb1790885zero film wikipediawiki title not matchingzero 2016 film wikipedia
+Movie Found
+Movie not found. going for pattern match
+am ai
+amavasai film imdb4165388amavasai film wikipediawiki title not matchingamavasai 2016 film wikipediaamavasai filmibeat
+Movie Found
+Movie Found
+Iraivi56ff537af74786569e250710upcomingnull
+Movie not found. going for pattern match
+at ai
+atharmavettai film imdbatharmavettai film wikipediaatharmavettai filmibeat
+Movie Found
+Movie not found. going for pattern match
+ar ee
+aruntha pathiee film imdbaruntha pathiee film wikipediawiki title not matchingaruntha pathiee 2016 film wikipediacall2aruntha pathiee 2016 film wikipediaaruntha pathiee filmibeat
+Movie Found
+Movie not found. going for pattern match
+an om
+andava kaanom film imdb2564144andava kaanom film wikipediawiki title not matchingandava kaanom 2016 film wikipediacall2andava kaanom 2016 film wikipediaandava kaanom filmibeat
+Movie FoundArray
+(
+    [0] => Haramkhor
+    [1] => Ranbanka
+    [2] => Paani
+)
+
+Movie not found. going for pattern match
+ha or
+haramkhor film imdb3531774haramkhor film wikipediawiki title not matchingharamkhor 2016 film wikipediacall2haramkhor 2016 film wikipediaharamkhor filmibeat
+Movie Found
+Movie not found. going for pattern match
+ra ka
+ranbanka film imdb5151622
+Movie Found
+Movie not found. going for pattern match
+pa ni
+paani film imdb0348699
+Movie FoundArray
+(
+    [0] => The 33
+    [1] => Spotlight
+    [2] => Rings
+    [3] => Miss You Already
+    [4] => Brooklyn
+    [5] => By The Sea
+    [6] => Trumbo
+)
+
+Movie not found. going for pattern match
+th 33
+the 33 film imdb2006295
+Movie Found
+Movie not found. going for pattern match
+sp ht
+spotlight film imdb1895587
+Movie Found
+Movie not found. going for pattern match
+ri gs
+rings film imdb0498381rings film wikipediawiki title not matchingrings 2016 film wikipedia
+Movie Found
+Movie not found. going for pattern match
+mi dy
+miss you already film imdb2245003
+Movie Found
+Movie not found. going for pattern match
+br yn
+brooklyn film imdb2381111
+Movie Found
+Movie not found. going for pattern match
+by ea
+by the sea film imdb3707106
+Movie Found
+Movie not found. going for pattern match
+tr bo
+trumbo film imdb3203606
+Movie FoundArray
+(
+    [0] => Natho Nenu
+    [1] => Aditya
+    [2] => Alexander IPS
+    [3] => Maa Nanna Police
+    [4] => Advocate Anuradha Verma
+    [5] => Gulabi
+    [6] => Tapori
+)
+
+Movie not found. going for pattern match
+na nu
+natho nenu film imdb4417510natho nenu film wikipediawiki title not matchingnatho nenu 2016 film wikipedianatho nenu filmibeat
+Movie Found
+Movie not found. going for pattern match
+ad ya
+aditya film imdbaditya film wikipediawiki title not matchingaditya 2016 film wikipediaaditya filmibeat
+Movie Found
+Movie not found. going for pattern match
+al ps
+alexander ips film imdb0346491alexander ips film wikipediawiki title not matchingalexander ips 2016 film wikipediaalexander ips filmibeat
+Movie Found
+Movie not found. going for pattern match
+ma ce
+maa nanna police film imdb1582539maa nanna police film wikipediawiki title not matchingmaa nanna police 2016 film wikipediamaa nanna police filmibeat
+Movie Found
+Movie not found. going for pattern match
+ad ma
+advocate anuradha verma film imdbadvocate anuradha verma film wikipediawiki title not matchingadvocate anuradha verma 2016 film wikipediaadvocate anuradha verma filmibeat
+Movie Found
+Movie not found. going for pattern match
+gu bi
+gulabi film imdb2196638gulabi film wikipedia
+Movie Found
+Movie not found. going for pattern match
+ta ri
+tapori film imdb4591232
+Movie Found
+Ticket New Upcoming Extract Job completed on 2016/04/02 11:06:36
+Upcoming Extract Job completed on 2016/04/02 11:06:36
