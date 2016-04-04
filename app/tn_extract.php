@@ -109,11 +109,12 @@ if(linkcheck($tktnew_url))
 	        	    updateMovieType($movies_collection,$movie_id,$type,$prevs_type,$current_ts);
 	        	    
 	        		if(!checkLink($movie,$movie_link))
+	        		{
 	        		updateMovieBookingLinks($movies_collection,$movie_id,$movie_name,$movie_link,"tktnew",$current_ts);
 	        		
 	        		$events = $events_collection->insertOne(
-	        		array("movie_name"=>$movie_name,"lang"=>$lang,"event_id"=>getCounter("event_id",$counter_collection),"event_type" => "UR","notify"=> 'true',"insert_ts" => $current_ts ));
-	        
+	        		array("movie_id"=>$movie_id,"movie_name"=>$movie_name,"lang"=>$lang,"event_id"=>getCounter("event_id",$counter_collection),"event_type" => "UR","opened_at" => "tktnew","notify"=> 'true',"insert_ts" => $current_ts ));
+	        		}
 	        	}
 	        	
 	        	elseif($current_type=="running")
@@ -122,9 +123,12 @@ if(linkcheck($tktnew_url))
 	        	    updateMovieType($movies_collection,$movie_id,$type,$prevs_type,$current_ts);
 	        	
 	        		if(!checkLink($movie,$movie_link))
+	        		{
 	        	    updateMovieBookingLinks($movies_collection,$movie_id,$movie_name,$movie_link,"tktnew",$current_ts);
 	        	   // *********** Should event notification come here. separate notificaiton should be sent out when booking opens in ticketnew and bms //
-	        	  
+	        	    $events = $events_collection->insertOne(
+	        		array("movie_id"=>$movie_id,"movie_name"=>$movie_name,"lang"=>$lang,"event_id"=>getCounter("event_id",$counter_collection),"event_type" => "RR","opened_at" => "tktnew","notify"=> 'true',"insert_ts" => $current_ts ));
+	        		}
 	        	}
 	        	
 	        	elseif($current_type=="closed")
@@ -133,12 +137,17 @@ if(linkcheck($tktnew_url))
 	        	    updateMovieType($movies_collection,$movie_id,$type,$prevs_type,$current_ts);
 	        		
 	        		if(!checkLink($movie,$movie_link))
+	        		{
 	        	    updateMovieBookingLinks($movies_collection,$movie_id,$movie_name,$movie_link,"tktnew",$current_ts);
+	        	    $events = $events_collection->insertOne(
+	        		array("movie_id"=>$movie_id,"movie_name"=>$movie_name,"lang"=>$lang,"event_id"=>getCounter("event_id",$counter_collection),"event_type" => "RR","opened_at" => "tktnew","notify"=> 'true',"insert_ts" => $current_ts ));
+	        		}
 	        	}        
             }
             else {
                 
                 //$movie_details=get_imdb_det($movie_name);
+                $movie_name=title_clean($movie_name); //specially made for ticket new to remove 2d,3d, dolby, with english subtitle from movie title
                 $movie_details=getMovieDetails($movie_name,$movie_link,$lang,"tktnew");
                 
                 //echo "\n";
@@ -156,7 +165,7 @@ if(linkcheck($tktnew_url))
 	        	    	updateMovieBookingLinks($movies_collection,$movie_id,$movie_name,$movie_link,"tktnew",$current_ts);
 	                    
 	        	    	$events = $events_collection->insertOne(
-	        	    	array("movie_name"=>$movie_name,"lang"=>$lang,"event_id"=>getCounter("event_id",$counter_collection),"event_type" => "FR","notify"=> 'true',"insert_ts" => $current_ts ));
+	        	    	array("movie_id"=>$movie_id,"movie_name"=>$movie_name,"lang"=>$lang,"event_id"=>getCounter("event_id",$counter_collection),"event_type" => "FR","opened_at" => "tktnew","notify"=> 'true',"insert_ts" => $current_ts ));
 	                    
                     }
                 }
@@ -169,7 +178,7 @@ if(linkcheck($tktnew_url))
     	                updateMovieBookingLinks($movies_collection,$movie_id,$movie_name,$movie_link,"tktnew",$current_ts);
     	                
     	        	    $events = $events_collection->insertOne(
-    	        	    array("movie_name"=>$movie_name, "lang"=>$lang, "event_id"=>getCounter("event_id",$counter_collection),"event_type" => "FR","notify"=> 'true',"insert_ts" => $current_ts ));
+    	        	    array("movie_id"=>$movie_id,"movie_name"=>$movie_name, "lang"=>$lang, "event_id"=>getCounter("event_id",$counter_collection),"event_type" => "FR","opened_at" => "tktnew","notify"=> 'true',"insert_ts" => $current_ts ));
                 }
             }
         }

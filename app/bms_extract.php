@@ -79,17 +79,25 @@ foreach($upcoming_movies as $movies)
 	        	    updateMovieType($movies_collection,$movie_id,$type,$prevs_type,$current_ts);
 	        	    
 	        		if(!checkLink($movie,$movie_link))
+	        		{
 	        		updateMovieBookingLinks($movies_collection,$movie_id,$movie_name,$movie_link,"bms",$current_ts);
 			        		    
 					$events = $events_collection->insertOne(
-					array("movie_name"=>$movie_name,"lang"=>$lang,"event_id"=>getCounter("event_id",$counter_collection),"event_type" => "UR","notify"=> 'true',"insert_ts" => $current_ts ));
+					array("movie_id"=>$movie_id,"movie_name"=>$movie_name,"lang"=>$lang,"event_id"=>getCounter("event_id",$counter_collection),"event_type" => "UR","opened_at" => "bms","notify"=> 'true',"insert_ts" => $current_ts ));
+	        		}
 				}
 				elseif($current_type=="running")
 				{
 				    updateMovieType($movies_collection,$movie_id,$type,$prevs_type,$current_ts);
 	        	
 	        		if(!checkLink($movie,$movie_link))
+	        		{
 	        	    updateMovieBookingLinks($movies_collection,$movie_id,$movie_name,$movie_link,"bms",$current_ts);
+	        	    
+	        	    $events = $events_collection->insertOne(
+					array("movie_id"=>$movie_id,"movie_name"=>$movie_name,"lang"=>$lang,"event_id"=>getCounter("event_id",$counter_collection),"event_type" => "RR","opened_at" => "bms","notify"=> 'true',"insert_ts" => $current_ts ));
+	        		
+	        		}
 				}
 				elseif($current_type=="closed")
 				{
@@ -97,7 +105,12 @@ foreach($upcoming_movies as $movies)
 	        	    updateMovieType($movies_collection,$movie_id,$type,$prevs_type,$current_ts);
 	        		
 	        		if(!checkLink($movie,$movie_link))
+	        		{
 	        	    updateMovieBookingLinks($movies_collection,$movie_id,$movie_name,$movie_link,"bms",$current_ts);
+	        	    $events = $events_collection->insertOne(
+					array("movie_id"=>$movie_id,"movie_name"=>$movie_name,"lang"=>$lang,"event_id"=>getCounter("event_id",$counter_collection),"event_type" => "RR","opened_at" => "bms","notify"=> 'true',"insert_ts" => $current_ts ));
+	        		
+	        		}
 				}        
 		    }
 		    
@@ -119,7 +132,7 @@ foreach($upcoming_movies as $movies)
 	        	    	updateMovieBookingLinks($movies_collection,$movie_id,$movie_name,$movie_link,"bms",$current_ts);
 			            
 				    	$events = $events_collection->insertOne(
-				    	array("movie_name"=>$movie_name, "lang" => $lang,"event_id"=>getCounter("event_id",$counter_collection),"event_type" => "FR","notify"=> 'true',"insert_ts" => $current_ts ));
+				    	array("movie_id"=>$movie_id,"movie_name"=>$movie_name, "lang" => $lang,"event_id"=>getCounter("event_id",$counter_collection),"event_type" => "FR","opened_at" => "bms","notify"=> 'true',"insert_ts" => $current_ts ));
 			            
 		            }
 		        }
@@ -133,7 +146,7 @@ foreach($upcoming_movies as $movies)
 			            
 						
 						$events = $events_collection->insertOne(
-				    	array("movie_name"=>$movie_name, "lang"=>$lang, "event_id"=>getCounter("event_id",$counter_collection),"event_type" => "FR","notify"=> 'true',"insert_ts" => $current_ts ));
+				    	array("movie_id"=>$movie_id,"movie_name"=>$movie_name, "lang"=>$lang, "event_id"=>getCounter("event_id",$counter_collection),"event_type" => "FR","opened_at" => "bms","notify"=> 'true',"insert_ts" => $current_ts ));
 			            
 		        }
 		        

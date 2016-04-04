@@ -94,12 +94,19 @@ foreach($events as $document)
     $json = json_decode($temp , true);
    // print_r($json);
     echo $document["_id"];
-    $not_title = $json["movie_name"]." (Tamil)";
+    $lang =  $json["lang"];
+    $not_title = $json["movie_name"]." (".$lang.")";
     $movie_id = (string)$document["_id"];
     $movie_name = $json["movie_name"];
+    
+    if($json["opened_at"]=="tktnew")
+    $booking_site="ticketnew.com";
+    elseif($json["opened_at"]=="bms")
+    $booking_site="bookmyshow.com";
+    
     if($json["event_type"]=="RC")
     {
-      $event_type="Booking closed on ticketnew.com";
+      $event_type="Booking closed on ".$booking_site;
     }
     elseif($json["event_type"]=="FU")
     {
@@ -107,11 +114,15 @@ foreach($events as $document)
     }
     elseif($json["event_type"]=="UR")
     {
-      $event_type="Booking opened on ticketnew.com";
+      $event_type="Booking opened on ".$booking_site;
     }
     elseif($json["event_type"]=="FR")
     {
-      $event_type="Booking opened on ticketnew.com";
+      $event_type="Booking opened on ".$booking_site;
+    }
+     elseif($json["event_type"]=="RR")
+    {
+      $event_type="Booking opened on ".$booking_site;
     }
 
     $data = array(

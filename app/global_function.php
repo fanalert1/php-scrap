@@ -32,6 +32,25 @@ function isRunning($value,$collection)
      }
 }
 
+function title_clean($value)
+{
+   // $value = strtolower($value);
+   // $value = preg_replace('/[^A-Za-z0-9\-]/', '', $value);  //this removes space also. not needed for basic clean
+    $value = str_replace('(','',$value);
+    $value = str_replace(')','',$value);
+    $value = str_replace('-','',$value);
+    $value = str_ireplace('2d','',$value);
+    $value = str_ireplace('3d','',$value);
+    $value = str_ireplace('with','',$value); // with English Subtitle
+    $value = str_ireplace('english','',$value); // with English Subtitle
+    $value = str_ireplace('subtitle','',$value); // with English Subtitle
+    $value = str_ireplace('dolby atmos','',$value);
+    $value = str_ireplace('film','',$value); //to remove film from wiki title
+    $value = trim($value);
+    return $value;
+    
+}
+
 function basic_clean($value)
 {
     $value = strtolower($value);
