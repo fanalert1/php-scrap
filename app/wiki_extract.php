@@ -122,7 +122,7 @@ foreach($movies_list as $key=>$values)
         {
             insertMovie($movies_collection,$movie_name,"Tamil");
             $movie_id=isPresent($movie_name,$movies_collection,"Tamil");
-            $params =array("type" => $type,"poster_url"=>is_null($values["poster"]) ? "null" : $values["poster"], "actors"=>is_null($values["cast"]) ? "null" : $values["cast"],"director"=>is_null($values["director"]) ? "null" : $values["director"],"music_director"=>is_null($values["music"]) ? "null" : $values["music"],"genre"=>"null","producer"=>is_null($values["producer"]) ? "null" : $values["producer"],"release_ts"=>is_null($values["release"]) ? "null" : date("Y/m/d",strtotime($values["release"])),"synopsis"=>is_null($values["synopsis"]) ? "null" : $values["synopsis"],"det_stat"=>"new","disabled"=>"false","insert_ts" => $current_ts );
+            $params =array("type" => $type,"poster_url"=>is_null($values["poster"]) ? "null" : $values["poster"], "actors"=>is_null($values["cast"]) ? "null" : $values["cast"],"director"=>is_null($values["director"]) ? "null" : $values["director"],"music_director"=>is_null($values["music"]) ? "null" : $values["music"],"genre"=>"null","producer"=>is_null($values["producer"]) ? "null" : $values["producer"],"release_ts"=>is_null($values["release"]) ? "null" : date("Y/m/d",strtotime($values["release"])),"synopsis"=>is_null($values["synopsis"]) ? "null" : $values["synopsis"],"det_stat"=>"new","disabled"=>"true","insert_ts" => $current_ts );
             updateMovieDetails($movies_collection,$movie_id,$params);
             updateMovieDetailsLinks($movies_collection,$movie_id,$movie_name,$values["link"],"wiki");
             

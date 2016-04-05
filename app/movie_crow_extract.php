@@ -91,7 +91,7 @@ foreach($movies_list as $key=>$values)
             {
                 insertMovie($movies_collection,$movie_name,$lang);
                 $movie_id=isPresent($movie_name,$movies_collection,$lang);
-                $params=array("type" => "new", "prev_type"=>"null","det_stat"=>"new","poster_url"=>(gettype($details["poster"])=="string" ? $details["poster"] : "null"),"actors"=>is_null($details["cast"]) ? "null" : $details["cast"],"director"=>is_null($details["director"]) ? "null" : $details["director"],"music_director"=>is_null($details["music"]) ? "null" : $details["music"],"genre"=>is_null($details["genre"]) ? "null" : $details["genre"],"producer"=>is_null($details["producer"]) ? "null" : $details["producer"],"release_ts"=>is_null($details["release"]) ? "null" : $details["release"], "det_stat"=>"new","disabled"=>"false", "insert_ts" => $current_ts );
+                $params=array("type" => "new", "prev_type"=>"null","det_stat"=>"new","poster_url"=>(gettype($details["poster"])=="string" ? $details["poster"] : "null"),"actors"=>is_null($details["cast"]) ? "null" : $details["cast"],"director"=>is_null($details["director"]) ? "null" : $details["director"],"music_director"=>is_null($details["music"]) ? "null" : $details["music"],"genre"=>is_null($details["genre"]) ? "null" : $details["genre"],"producer"=>is_null($details["producer"]) ? "null" : $details["producer"],"release_ts"=>is_null($details["release"]) ? "null" : $details["release"], "det_stat"=>"new","disabled"=>"true", "insert_ts" => $current_ts );
                 updateMovieDetails($movies_collection,$movie_id,$params);
 	           	updateMovieDetailsLinks($movies_collection,$movie_id,$movie_name,$values["link"],"moviecrow");
 	        		/*$result = $movies_collection->updateOne(
@@ -105,7 +105,7 @@ foreach($movies_list as $key=>$values)
         {
             insertMovie($movies_collection,$movie_name,$lang);
             $movie_id=isPresent($movie_name,$movies_collection,$lang);
-            $params = array("type" => "new", "prev_type"=>"null","det_stat"=>"new","disabled"=>"false", "insert_ts" => $current_ts );
+            $params = array("type" => "new", "prev_type"=>"null","det_stat"=>"new","disabled"=>"true", "insert_ts" => $current_ts );
 	        updateMovieDetails($movies_collection,$movie_id,$params);
 	        updateMovieDetailsLinks($movies_collection,$movie_id,$movie_name,$values["link"],"moviecrow");
         }

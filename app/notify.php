@@ -47,8 +47,7 @@ $yourApiSecret = "03dc4c7c7df366924285ec8ed1094a5efcbe90235dac3bcb:"; //new app 
 //$androidAppId = "4cff0232";
 $androidAppId = "79818019";  //new app id
 
-$i=0;
-$device_tokens=array();
+
 
 /*$token = $tokens_collection->find();
 foreach($token as $document)
@@ -59,10 +58,45 @@ foreach($token as $document)
   $i +=1;
 }*/
 //$ch = curl_init('https://parse-androbala.c9users.io/parse/users');
-$ch = curl_init('http://128.199.141.102:8080/parse/users');
 
+
+//$encoded=urlencode('where={"notify":"true","tamil":"true","english":"true","hindi":"true","others":"true"}');
+$encoded='where={"notify":"true","tamil":"true","english":"true","hindi":"true","others":"true"}';
+$url='http://128.199.141.102:8080/parse/users?'.$encoded;
+$all_device_tokens=get_tokens($url);
+print_r($all_device_tokens);
+
+$encoded='where={"notify":"true","tamil":"true"}';
+$url='http://128.199.141.102:8080/parse/users?'.$encoded;
+$tamil_device_tokens=get_tokens($url);
+print_r($tamil_device_tokens);
+
+$encoded='where={"notify":"true","english":"true"}';
+$url='http://128.199.141.102:8080/parse/users?'.$encoded;
+$english_device_tokens=get_tokens($url);
+print_r($english_device_tokens);
+
+$encoded='where={"notify":"true","hindi":"true"}';
+$url='http://128.199.141.102:8080/parse/users?'.$encoded;
+$hindi_device_tokens=get_tokens($url);
+print_r($hindi_device_tokens);
+
+$encoded='where={"notify":"true","others":"true"}';
+$url='http://128.199.141.102:8080/parse/users?'.$encoded;
+$others_device_tokens=get_tokens($url);
+print_r($others_device_tokens);
+
+
+function get_tokens($url)
+{
+    $i=0;
+    $j=0;
+    $device_tokens=array();
+    
+    $ch = curl_init($url);
     curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "GET");
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    //curl_setopt($ch, CURLOPT_POSTFIELDS,  $encoded);
     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
         'Content-Type: application/json',
         'X-Parse-Application-Id: 12345',
@@ -77,11 +111,23 @@ $ch = curl_init('http://128.199.141.102:8080/parse/users');
     {
         if(!($value["token"]=="")){
         //echo $value["username"].",  ".$value["email"].",  ".$value["token"]."\n";
-        $device_tokens[$i]=$value["token"];
-        $i +=1;
+        $device_tokens[$i][$j]=$value["token"];
+            if($j==49)
+            {
+            $j=0;
+            $i+=1;
+            }
+            else
+            {
+            $j+=1;
+            } 
         }
         
     }
+    
+    return $device_tokens;
+}
+//process events to the device tokens
 
 $event_type="";
 $not_title="";
@@ -96,7 +142,7 @@ foreach($events as $document)
     echo $document["_id"];
     $lang =  $json["lang"];
     $not_title = $json["movie_name"]." (".$lang.")";
-    $movie_id = (string)$document["_id"];
+    $movie_id = (string)$document["movie_id"];
     $movie_name = $json["movie_name"];
     
     if($json["opened_at"]=="tktnew")
@@ -124,26 +170,33 @@ foreach($events as $document)
     {
       $event_type="Booking opened on ".$booking_site;
     }
-
-    $data = array(
-      "tokens" => $device_tokens,
-      "notification" => ["alert"=>$event_type,"android"=>["title" => $not_title,"notId"=>$json["event_id"],"payload"=>["image"=>"icon","title" => $not_title,"message" => $event_type,"movie_id" => $movie_id, "movie_name" => $movie_name]]]
+    
+    foreach ($all_device_tokens as $device_tokens_batch) {
+        // code...
+    
+        $data = array(
+          "tokens" => $device_tokens_batch,
+          "notification" => ["alert"=>$event_type,"android"=>["title" => $not_title,"notId"=>$json["event_id"],"payload"=>["image"=>"icon","title" => $not_title,"message" => $event_type,"movie_id" => $movie_id, "movie_name" => $movie_name]]]
+            );
+        $data_string = json_encode($data);
+        $ch = curl_init('https://push.ionic.io/api/v1/push');
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array(
+            'Content-Type: application/json',
+            'X-Ionic-Application-Id: '.$androidAppId,
+            'Content-Length: ' . strlen($data_string),
+            'Authorization: Basic '.base64_encode($yourApiSecret)
+            )
         );
-    $data_string = json_encode($data);
-    $ch = curl_init('https://push.ionic.io/api/v1/push');
-    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
-    curl_setopt($ch, CURLOPT_POSTFIELDS, $data_string);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_HTTPHEADER, array(
-        'Content-Type: application/json',
-        'X-Ionic-Application-Id: '.$androidAppId,
-        'Content-Length: ' . strlen($data_string),
-        'Authorization: Basic '.base64_encode($yourApiSecret)
-        )
-    );
-    $result = curl_exec($ch);
-    echo $data_string."\n";
-    echo $result."\n";
+        $result = curl_exec($ch);
+        echo "BATCH 1";
+        print_r($device_tokens_batch);
+        echo $data_string."\n";
+        
+    } 
+   // echo $result."\n";
     $test = $events_collection->updateOne(
             ['event_id' => $json["event_id"]],
             ['$set' => array("notify"=>"done","notified_ts" => $current_ts)],
