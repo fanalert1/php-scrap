@@ -171,7 +171,18 @@ foreach($events as $document)
       $event_type="Booking opened on ".$booking_site;
     }
     
-    foreach ($all_device_tokens as $device_tokens_batch) {
+    $device_tokens=array();
+    
+    if($lang=="Tamil")
+    $device_tokens=$tamil_device_tokens;
+    elseif($lang=="English")
+    $device_tokens=$english_device_tokens;
+    elseif($lang=="Hindi")
+    $device_tokens=$hindi_device_tokens;
+    elseif($lang=="Malayalam"||$lang=="Telugu"||$lang=="Kannada")
+    $device_tokens=$others_device_tokens;
+    
+    foreach ($device_tokens as $device_tokens_batch) {
         // code...
     
         $data = array(
