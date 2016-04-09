@@ -156,7 +156,7 @@ foreach($events as $document)
     }
     elseif($json["event_type"]=="FU")
     {
-      $event_type=$json["movie_name"]." is releasing soon";
+      $event_type="Get Ready. ".$json["movie_name"]." is coming soon";
     }
     elseif($json["event_type"]=="UR")
     {
