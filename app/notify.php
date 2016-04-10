@@ -27,6 +27,8 @@ foreach($result as $key=> $document)
     $diff=date_diff($update,$current);
     $difference=$diff->format("%h");
 
+//should update prev type of closed movies also
+
     if($difference>=12)
     {
     $type="closed";
@@ -38,7 +40,7 @@ foreach($result as $key=> $document)
         $events = $events_collection->insertOne(
             array("movie_id"=>$json["id"],"movie_name"=>$json["name"],"event_id"=>getCounter("event_id",$counter_collection),"event_type" => "RC","notify"=> 'true',"insert_ts" => $current_ts ));
 
-}
+    }
 }
 //Notification for the new events added
 
