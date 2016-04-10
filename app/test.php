@@ -7,13 +7,19 @@ require('global_function.php');
 //require_once('scrap_details.php');
 use Bing\Client;
      
-     $movie_name = "Thozha";
-     $movie_link = "https://in.bookmyshow.com/chennai/movies/valeba-raja/ET00028995";
-     $search_type = "Movie";
+     $movie_id="570392b6f7478646a55a1a4f";
+     $movie_name = "Theri";
+     //$movie_link = "https://in.bookmyshow.com/chennai/movies/valeba-raja/ET00028995";
+     $theatre = "Devicineplex";
+     $lang="Tamil";
+     $opened_at="tktnew";
+    $search_type = "Movie";
      
-     $lang = "Malayalam";
+    //$lang = "Malayalam";
      
      
+     
+     createTheaterEvent($events_collection,$counter_collection,$movie_id,$movie_name,$lang,$theatre,$opened_at);
      /*
      $movie_name2 = "batman&supermandawnofjustice";
      similar_text($movie_name, $movie_name2, $p); 
@@ -21,11 +27,12 @@ use Bing\Client;
    */
   // $movie_details=get_imdb_det($movie_name);
    
+   /*
   $movie_details=array();
   $movie_details=getMovieDetails($movie_name,$movie_link,$lang,"bms");
    
    print_r($movie_details);
-   
+   */
    
    
    

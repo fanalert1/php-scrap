@@ -551,4 +551,29 @@ function bingSearch($movie_name,$lang,$source,$year="")
     return $url;
 }
 
+
+function createTheaterEvent($events_collection,$counter_collection,$movie_id,$movie_name,$lang,$theatre,$opened_at)
+{
+    $current_ts=date("Y/m/d H:i:s");
+     $present = $events_collection->findOne(["movie_id" => new MongoDB\BSON\ObjectID('570392b6f7478646a55a1a4f'),"theatre"=>$theatre]);
+       print_r($present);
+  //  findOne(['_id' => $id]);
+  if(!isset($present["_id"]))
+    {
+        
+    	$events = $events_collection->insertOne(
+	        		array("movie_id" => new MongoDB\BSON\ObjectID('570392b6f7478646a55a1a4f'),"movie_name"=>$movie_name,"lang"=>$lang,"theatre"=>$theatre,"opened_at" => $opened_at,
+	        		"event_id"=>getCounter("event_id",$counter_collection),"event_type" => "TH","notify"=> 'true',"insert_ts" => $current_ts ));
+  
+    }  
+    else{
+        
+        echo "theatre event already exists";
+    }
+  
+//  db.events.insert({"movie_id": ObjectId("570392b6f7478646a55a1a4f"),"movie_name":"Theri","lang":"Tamil","event_id":3,"event_type":"TH","theatre":"Devicineplex","opened_at":"tktnew","notify":"true","insert_ts" : "2016/04/10 19:20:48"})
+  
+  //  "event_id"=>getCounter("event_id",$counter_collection),"event_type" => "UR","opened_at" => "tktnew","notify"=> 'true',"insert_ts" => $current_ts
+}
+
 ?>

@@ -152,6 +152,18 @@ foreach($events as $document)
     elseif($json["opened_at"]=="bms")
     $booking_site="bookmyshow.com";
     
+    if($json["event_type"]=="CU")
+    {
+      $not_title = "Important: Theri Update";
+      $event_type="Broadcasting theatre wise alerts";
+    }
+    
+    
+    if($json["event_type"]=="TH")
+    {
+      $event_type="Booking opened in ".$json["theatre"]." (".$booking_site.")";
+    }
+    
     if($json["event_type"]=="RC")
     {
       $event_type="Booking closed on ".$booking_site;
