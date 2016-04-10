@@ -111,13 +111,13 @@ if(linkcheck($tktnew_url))
 	        	    $prevs_type="upcoming";
 	        	    updateMovieType($movies_collection,$movie_id,$type,$prevs_type,$current_ts);
 	        	    
-	        		if(!checkLink($movie,$movie_link))
-	        		{
+	        	//	if(!checkLink($movie,$movie_link))
+	        	//	{
 	        		updateMovieBookingLinks($movies_collection,$movie_id,$event_movie_name,$movie_link,"tktnew",$current_ts);
 	        		
 	        		$events = $events_collection->insertOne(
 	        		array("movie_id"=>$movie_id,"movie_name"=>$event_movie_name,"lang"=>$lang,"event_id"=>getCounter("event_id",$counter_collection),"event_type" => "UR","opened_at" => "tktnew","notify"=> 'true',"insert_ts" => $current_ts ));
-	        		}
+	        //		}
 	        	}
 	        	
 	        	elseif($current_type=="running")
