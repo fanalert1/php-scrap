@@ -63,31 +63,36 @@ foreach($token as $document)
 
 
 //$encoded=urlencode('where={"notify":"true","tamil":"true","english":"true","hindi":"true","others":"true"}');
-$encoded='where={"notify":"true","tamil":"true","english":"true","hindi":"true","others":"true"}';
-$url='http://128.199.141.102:8080/parse/users?'.$encoded;
+//$encoded='where={"notify":"true","tamil":"true","english":"true","hindi":"true","others":"true"}';
+//$url='http://128.199.141.102:8080/parse/users?'.$encoded;
+$url='http://128.199.141.102:8080/parse/users';
 $all_device_tokens=get_tokens($url);
-print_r($all_device_tokens);
+//print_r($all_device_tokens);
 
 $encoded='where={"notify":"true","tamil":"true"}';
 $url='http://128.199.141.102:8080/parse/users?'.$encoded;
 $tamil_device_tokens=get_tokens($url);
-print_r($tamil_device_tokens);
+//print_r($tamil_device_tokens);
 
 $encoded='where={"notify":"true","english":"true"}';
 $url='http://128.199.141.102:8080/parse/users?'.$encoded;
 $english_device_tokens=get_tokens($url);
-print_r($english_device_tokens);
+//print_r($english_device_tokens);
 
 $encoded='where={"notify":"true","hindi":"true"}';
 $url='http://128.199.141.102:8080/parse/users?'.$encoded;
 $hindi_device_tokens=get_tokens($url);
-print_r($hindi_device_tokens);
+//print_r($hindi_device_tokens);
 
 $encoded='where={"notify":"true","others":"true"}';
 $url='http://128.199.141.102:8080/parse/users?'.$encoded;
 $others_device_tokens=get_tokens($url);
-print_r($others_device_tokens);
+//print_r($others_device_tokens);
 
+$encoded='where={"notify":"true","tamil":"true","theatre":"true"}';
+$url='http://128.199.141.102:8080/parse/users?'.$encoded;
+$theatre_device_tokens=get_tokens($url);
+//print_r($theatre_device_tokens);
 
 function get_tokens($url)
 {
@@ -148,20 +153,20 @@ foreach($events as $document)
     $movie_name = $json["movie_name"];
     
     if($json["opened_at"]=="tktnew")
-    $booking_site="ticketnew.com";
+    $booking_site="ticketnew";
     elseif($json["opened_at"]=="bms")
-    $booking_site="bookmyshow.com";
+    $booking_site="bookmyshow";
     
     if($json["event_type"]=="CU")
     {
-      $not_title = "Important: Theri Update";
-      $event_type="Broadcasting theatre wise alerts";
+      $not_title = "App Update Available";
+      $event_type="New Settings for theatre wise alerts";
     }
     
     
     if($json["event_type"]=="TH")
     {
-      $event_type="Booking opened in ".$json["theatre"]." (".$booking_site.")";
+      $event_type="Opened in ".$json["theatre"]." (".$booking_site.")";
     }
     
     if($json["event_type"]=="RC")
@@ -188,13 +193,28 @@ foreach($events as $document)
     $device_tokens=array();
     
     if($lang=="Tamil")
+    {
     $device_tokens=$tamil_device_tokens;
+    //should do array comparison and take the common elements alone
+        if($json["event_type"]=="TH")
+        {
+            $device_tokens=array();
+            $device_tokens=$theatre_device_tokens;
+        }
+    }
     elseif($lang=="English")
     $device_tokens=$english_device_tokens;
     elseif($lang=="Hindi")
     $device_tokens=$hindi_device_tokens;
     elseif($lang=="Malayalam"||$lang=="Telugu"||$lang=="Kannada")
     $device_tokens=$others_device_tokens;
+    
+   if($json["event_type"]=="CU")
+        {
+            $device_tokens=array();
+            $device_tokens=$all_device_tokens;
+        }
+    
     
     foreach ($device_tokens as $device_tokens_batch) {
         // code...
